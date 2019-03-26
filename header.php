@@ -24,9 +24,9 @@
                 <a class="nav-link" href="#">Gallery</a>
             </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#"><span class="fas fa-user"></span> Sign Up</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="fas fa-sign-in-alt"></span> Login</a></li>
         </ul>
     </nav>
 </header>
