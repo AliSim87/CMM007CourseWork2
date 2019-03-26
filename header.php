@@ -11,7 +11,7 @@
 </head>
 <body>
 <header>
-    <nav class="navbar-nav">
+    <nav class="navbar-nav navbar-expand-sm">
         <a class="navbar-brand" href="#">Logo</a>
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -24,7 +24,10 @@
                 <a class="nav-link" href="#">Gallery</a>
             </li>
         </ul>
-
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
     </nav>
 </header>
 
