@@ -18,13 +18,13 @@
         <a class="navbar-brand" href="#">Logo</a>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="aboutus.php">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Guideline</a>
+                <a class="nav-link" href="guidelines.php">Guideline</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Gallery</a>
+                <a class="nav-link" href="gallery.php">Gallery</a>
             </li>
         </ul>
         <ul class="nav navbar-nav ml-auto">
