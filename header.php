@@ -15,7 +15,7 @@
 <header>
     <div class="container">
     <nav class="navbar-nav navbar-expand-sm">
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="index.php">Logo</a>
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="aboutus.php">About Us</a>
