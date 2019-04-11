@@ -13,25 +13,25 @@
 </head>
 <body>
 <header>
-    <div class="container">
-    <nav class="navbar-nav navbar-expand-sm">
-        <a class="navbar-brand" href="index.php">Logo</a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="aboutus.php">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="guidelines.php">Guideline</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="gallery.php">Gallery</a>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="#"><span class="fas fa-user"></span> Sign Up</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="fas fa-sign-in-alt"></span> Login</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">Logo</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.php">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="guidelines.php">Guideline</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.php">Gallery</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fas fa-user"></span> Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fas fa-sign-in-alt"></span> Login</a></li>
+            </ul>
+        </div>
     </nav>
-    </div>
 </header>
 

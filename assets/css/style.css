@@ -2,3 +2,21 @@
     height: 200px;
     background: #aaa;
 }
+
+.login-form {
+    width: 400px;
+    margin: 50px auto;
+}
+.login-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    padding: 30px;
+}
+.login-form h2 {
+    margin: 0 0 15px;
+}
+
+.btn {
+    font-size: 15px;
+    font-weight: bold;
+}

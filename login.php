@@ -1,7 +1,7 @@
 <?php include 'header.php' ?>
 
 <div class="login-form">
-    <form action="/authentication.php" method="post">
+    <form action="authentication.php" method="post">
         <h2 class="text-center">Log in</h2>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Username" required="required">
@@ -13,8 +13,7 @@
             <button type="submit" class="btn btn-primary btn-block">Log in</button>
         </div>
         <div class="clearfix">
-            <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
-            <a href="#" class="pull-right">Forgot Password?</a>
+            <a href="#">Forgot Password?</a>
         </div>
     </form>
     <p class="text-center"><a href="#">Create an Account</a></p>
