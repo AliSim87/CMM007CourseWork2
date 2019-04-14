@@ -1,7 +1,7 @@
 <?php include 'header.php' ?>
 
 <main>
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div>
                 <h2>About Us</h2>
