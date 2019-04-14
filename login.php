@@ -5,7 +5,7 @@
         <form action="authentication.php" method="post">
             <h2 class="text-center">Log in</h2>
             <div class="form-group">
-                <input type="email" class="form-control" name="firstname" placeholder="Email Address" required="required">
+                <input type="text" class="form-control" name="firstname" placeholder="Email Address" required="required">
             </div>
             <div class="form-group">
                 <input type="password" class="form-control" name="password" placeholder="Password" required="required">
