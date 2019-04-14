@@ -1,14 +1,14 @@
 <?php include("dbconnect.php");
 
-    if(empty($_POST["firstname"]) || empty($_POST["password"]))
+    if(empty($_POST["username"]) || empty($_POST["password"]))
     {
         echo "Both fields are required.";
     }else
     {
-        $firstname=$_POST['firstname'];
+        $emailaddress=$_POST['username'];
         $password=$_POST['password'];
 
-        $sql="SELECT id FROM users WHERE firstname='$firstname' and password='$password'";
+        $sql="SELECT id FROM users WHERE username='$username' and password='$password'";
         $result=mysqli_query($db,$sql);
         if(mysqli_num_rows($result) == 1)
         {
