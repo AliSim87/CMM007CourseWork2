@@ -5,7 +5,7 @@
         echo "Both fields are required.";
     }else
     {
-        $emailaddress=$_POST['username'];
+        $username=$_POST['username'];
         $password=$_POST['password'];
 
         $sql="SELECT id FROM users WHERE username='$username' and password='$password'";
