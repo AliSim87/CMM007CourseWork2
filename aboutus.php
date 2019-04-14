@@ -1,4 +1,4 @@
-<?php include 'header.php' ?>
+<?php $pageTitle = "About Us"; include 'header.php' ?>
 
 <main>
     <div class="container mt-5">
