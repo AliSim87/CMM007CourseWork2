@@ -1,11 +1,11 @@
 <?php include("dbconnect.php");
 
-    if(empty($_POST["username"]) || empty($_POST["password"]))
+    if(empty($_POST["emailaddress"]) || empty($_POST["password"]))
     {
         echo "Both fields are required.";
     }else
     {
-        $username=$_POST['username'];
+        $emailaddress=$_POST['emailaddress'];
         $password=$_POST['password'];
 
         $sql="SELECT uid FROM users WHERE username='$emailaddress' and password='$password'";
