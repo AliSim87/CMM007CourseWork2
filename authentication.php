@@ -8,7 +8,7 @@
         $emailaddress=$_POST['emailaddress'];
         $password=$_POST['password'];
 
-        $sql="SELECT uid FROM users WHERE emailaddress='$emailaddress' and password='$password'";
+        $sql="SELECT id FROM users WHERE emailaddress='$emailaddress' and password='$password'";
         $result=mysqli_query($db,$sql);
         if(mysqli_num_rows($result) == 1)
         {
