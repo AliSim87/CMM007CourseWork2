@@ -8,7 +8,7 @@
         $firstname=$_POST['firstname'];
         $password=$_POST['password'];
 
-        $sql="SELECT id FROM users WHERE firstname='$firstname'";
+        $sql="SELECT id FROM users WHERE firstname='$firstname' and password='$password'";
         $result=mysqli_query($db,$sql);
         if(mysqli_num_rows($result) == 1)
         {
