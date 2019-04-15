@@ -10,5 +10,5 @@
         </div>
     </div>
 </main>
-
+    https://codewithawa.com/posts/image-upload-using-php-and-mysql-database
 <?php include 'footer.php' ?>
