@@ -9,7 +9,7 @@ $postaddress = $_POST["postaddress"];
 $postcity = $_POST["postcity"];
 $postcode = $_POST["postcode"];
 
-$sql = "INSERT INTO users (username, emailaddress,password,firstname,lastname,postaddress,postcity,postcode) VALUES ('$username', '$emailaddress','$password','$firstname','$lastname','$postaddress','$postcity','$postcode')";
+$sql = "INSERT INTO users (username,emailaddress,password,firstname,lastname,postaddress,postcity,postcode) VALUES ('$username','$emailaddress','$password','$firstname','$lastname','$postaddress','$postcity','$postcode')";
 
 if (mysqli_query($db, $sql)) {
 } else {
