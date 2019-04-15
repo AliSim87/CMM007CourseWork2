@@ -29,7 +29,7 @@
             </ul>
             <?php
             if (isset($_COOKIE['loggedin'])){
-                echo '<a href="profile.php">$_COOKIE["loggedin"]</a>';
+                echo '<a href="profile.php">' . $_COOKIE["loggedin"] . '</a>';
             }
             else {
                 echo '<ul class="nav navbar-nav ml-auto">
