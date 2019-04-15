@@ -29,11 +29,11 @@
             </ul>
             <?php
             if (isset($_COOKIE['loggedin'])){
-                echo '<ul class="nav navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="profile.php">' . $_COOKIE["loggedin"] . '</a> </li></ul>';
+                echo '<ul class="nav navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="profile.php"><span class="fas fa-user"></span>' . $_COOKIE["loggedin"] . '</a> </li></ul>';
             }
             else {
                 echo '<ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="signup.php"><span class="fas fa-user"></span> Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.php"><span class="fas fa-user-plus"></span> Sign Up</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.php"><span class="fas fa-sign-in-alt"></span> Login</a></li>
                 </ul>';
             }
