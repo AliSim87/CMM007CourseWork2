@@ -13,7 +13,8 @@
         if(mysqli_num_rows($result) == 1)
         {
             header("location: profile.php"); // Redirecting To another Page
-            setcookie('loggedin',$username,time()+3600);
+            $firstname="SELECT firstname FROM users WHERE username='$username' and password='$password'"
+            setcookie('loggedin',$firstname,time()+3600);
         }else {
             echo "Incorrect username or password.";
         }
