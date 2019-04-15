@@ -30,7 +30,7 @@
             <?php
             if (isset($_COOKIE['loggedin'])){
                 echo '<ul class="nav navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="userprofile.php"><span class="fas fa-user"></span> &nbsp' . $_COOKIE["loggedin"] . '</a> </li>
-                        <li class="nav-item"><a class="nav-link" href="logout.php"><span class="fas fa-sign-out-alt"></span> Sign Out</a></li></ul>';
+                        <li class="nav-item"><a class="nav-link" href="assets/scripts/logout.php"><span class="fas fa-sign-out-alt"></span> Sign Out</a></li></ul>';
             }
             else {
                 echo '<ul class="nav navbar-nav ml-auto">
