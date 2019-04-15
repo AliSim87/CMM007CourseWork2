@@ -27,10 +27,18 @@
                     <a class="nav-link" href="gallery.php">Gallery</a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="signup.php"><span class="fas fa-user"></span> Sign Up</a></li>
-                <li class="nav-item"><a class="nav-link" href="login.php"><span class="fas fa-sign-in-alt"></span> Login</a></li>
-            </ul>
+            <?php
+            if (isset($_COOKIE['loggedin'])) {
+                echo "<a href="profile.php">$_COOKIE['loggedin']</a>";
+            }
+            else {
+                echo "<ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="signup.php"><span class="fas fa-user"></span> Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php"><span class="fas fa-sign-in-alt"></span> Login</a></li>
+                </ul>"
+            }
+            ?>
+
         </div>
     </nav>
 </header>
