@@ -3,7 +3,8 @@
 }
 
 .jumbotron {
-    background: url("/assets/images/IMG_8112caitlinwilkinson.jpg") cover;
+    background-image: url("/assets/images/IMG_8112caitlinwilkinson.jpg");
+    background-size: cover;
 }
 
 .fakeimg {
