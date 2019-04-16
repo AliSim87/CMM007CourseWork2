@@ -13,8 +13,8 @@
         $result=mysqli_query($db,$sql);
         if(mysqli_num_rows($result) == 1)
         {
-            header("location: ..\..\userprofile.php");
             setcookie('loggedin',$username,time()+(60*60*24));
+            header("location: ..\..\userprofile.php");
         }else {
             echo "Incorrect username or password.";
         }
