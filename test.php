@@ -4,5 +4,7 @@ $sql="SELECT user_level FROM users WHERE username='$username' and password='$pas
 $result=$db->query($sql);
 $row=$result->fetch_array();
 $userlevel = $row['user_level'];
-echo $userlevel;
+echo "$userlevel";
 ?>
+
+<p>1</p>
