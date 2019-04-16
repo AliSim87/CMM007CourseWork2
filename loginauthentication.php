@@ -13,7 +13,7 @@
             header("location: userprofile.php"); // Redirecting To another Page
             setcookie('loggedin',$username,time()+3600);
             $sql="SELECT user_level FROM users WHERE username='$username' and password='$password'";
-            $userlevel=mysqli_query($db,$sql);
+            $userlevel=$db->query($sql);
             setcookie('accesslevel',$userlevel,time()+3600);
         }else {
             echo "Incorrect username or password.";
