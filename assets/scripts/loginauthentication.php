@@ -13,7 +13,7 @@
         $result=mysqli_query($db,$sql);
         if(mysqli_num_rows($result) == 1)
         {
-            header("location: ..\..\userprofile.php"); // Redirecting To another Page
+            header("location: ..\..\userprofile.php");
             setcookie('loggedin',$username,time()+3600);
         }else {
             echo "Incorrect username or password.";
