@@ -14,23 +14,23 @@
             <div class="form-group">
                 <p>Please select a category:</p>
                 <div>
-                    <input type="radio" class="form-control" id="landscape" name="landscape" value="landscape" checked>
+                    <input type="radio" id="landscape" name="landscape" value="landscape" checked>
                     <label for="landscape">City Landscape</label>
                 </div>
                 <div>
-                    <input type="radio" class="form-control" id="conceptual" name="conceptual" value="conceptual">
+                    <input type="radio" id="conceptual" name="conceptual" value="conceptual">
                     <label for="conceptual">Conceptual and Expressive</label>
                 </div>
                 <div>
-                    <input type="radio" class="form-control" id="nature" name="nature" value="nature">
+                    <input type="radio" id="nature" name="nature" value="nature">
                     <label for="nature">Nature in Bloom</label>
                 </div>
                 <div>
-                    <input type="radio" class="form-control" id="street" name="street" value="street">
+                    <input type="radio" id="street" name="street" value="street">
                     <label for="street">Street Photography</label>
                 </div>
                 <div>
-                    <input type="radio" class="form-control" id="portrait" name="portrait" value="portrait">
+                    <input type="radio" id="portrait" name="portrait" value="portrait">
                     <label for="portrait">Portrait on Location</label>
                 </div>
             </div>
@@ -38,10 +38,12 @@
                 <input type="">
             </div>
             <div class="form-group">
+                <textarea form="imageupload" rows="4" cols="50" name="comment">Enter supporting information here...</textarea>
+            </div>
+            <div class="form-group">
                 <input type="submit" class="form-control" name="submit" value="Upload">
             </div>
         </form>
-        <textarea rows="4" cols="50" name="comment" form="imageupload">Enter supporting information here...</textarea>
     </div>
 </main>
 <?php include 'footer.php' ?>
