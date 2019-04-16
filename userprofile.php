@@ -1,4 +1,9 @@
 <?php include 'header.php' ?>
+<?php
+    if(!isset($_COOKIE['loggedin'])){
+        header("Location:Login.php");
+        }
+?>
 <main>
     <div class="container mt-5">
         <div class="row">
