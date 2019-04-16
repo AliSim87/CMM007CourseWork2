@@ -30,3 +30,6 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
 echo $statusMsg;
 
 ?>
+
+// https://www.codexworld.com/upload-store-image-file-in-database-using-php-mysql/
+
