@@ -19,8 +19,9 @@
                     <p>Aberdeen Football Club are delighted to provide exclusive and unique access to photograph Russell Anderson and players behind-the-scenes at Pittodrie as a top  Blooming Big Aberdeen prize</p>
                     <h2>The competition is free to enter</h2>
                     <p>You must be currently living in Aberdeen to enter the competition. You must be between your 16th and 25th birthdays to enter the competition.</p>
+                <p><a href="aboutus.php">Read More</a></p>
             </div>
-            <div class="col-4 fakeimg">2 of 2</div>
+            <div class="col-4"><img src="assets/images/IMG_3878lynnwright.jpg"></div>
         </div>
     </div>
 </main>
