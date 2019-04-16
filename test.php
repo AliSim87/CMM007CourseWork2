@@ -5,8 +5,8 @@ $result=$db->query($sql);
 $row=$result->fetch_array();
 while($row = $result->fetch_array()){
     $userlevel = $row['user_level'];
-    echo "$userlevel";
+    echo "<p>{$userlevel}</p>";
 }
 ?>
 
-<p>2</p>
+<p>3</p>
