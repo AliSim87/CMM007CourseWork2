@@ -15,7 +15,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.php"><img scr="assets/images/Bloomingbiglogo.png"</a>
+            <a class="navbar-brand" href="index.php"><img scr="assets/images/Bloomingbiglogo.png" /></a>
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="aboutus.php">About Us</a>
