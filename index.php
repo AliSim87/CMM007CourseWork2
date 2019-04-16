@@ -3,9 +3,11 @@
 <main>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1>Big Blooming Aberdeen Photo Contest</h1>
-            <p><strong>Do you have a camera phone, pocket camera, dusty old camera, SLR, DSLR, mirrorless, Pinhole camera or anything in between?</strong></p>
-            <p>The point of the competition is to give you an opportunity to express yourselves about Aberdeen and your life in it. We also hope that some categories will help bring older and younger people together and some will celebrate the city’s green spaces</p>
+            <div class="jumbotext">
+                <h1>Big Blooming Aberdeen Photo Contest</h1>
+                <p><strong>Do you have a camera phone, pocket camera, dusty old camera, SLR, DSLR, mirrorless, Pinhole camera or anything in between?</strong></p>
+                <p>The point of the competition is to give you an opportunity to express yourselves about Aberdeen and your life in it. We also hope that some categories will help bring older and younger people together and some will celebrate the city’s green spaces</p>
+            </div>
         </div>
     </div>
     <div class="container">
