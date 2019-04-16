@@ -12,6 +12,7 @@
 .jumbotext {
     background-color: rgba(222,220,233,0.8);
     padding: 30px;
+    border-radius: 25px;
 }
 
 .fakeimg {
@@ -21,6 +22,11 @@
 
 body {
     margin-bottom: 60px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Amatic SC', cursive;
 }
 
 footer {
