@@ -2,6 +2,10 @@
     background-color: #dfdce9 !important;
 }
 
+.jumbotron {
+    background: url("/assets/images/IMG_8112caitlinwilkinson.jpg") cover;
+}
+
 .fakeimg {
     height: 200px;
     background: #aaa;
