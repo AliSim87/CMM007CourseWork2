@@ -13,7 +13,7 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="index.php"><img src="/assets/images/Bloomingbiglogo.png" width="100px" height="77.67px" alt="Big Blooming Aberdeen Logo"/></a>
             <ul class="navbar-nav">
