@@ -57,3 +57,9 @@ footer {
     font-size: 15px;
     font-weight: bold;
 }
+
+.img-homepage {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 25px;
+}
