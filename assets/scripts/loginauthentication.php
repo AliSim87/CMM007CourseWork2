@@ -14,7 +14,7 @@
         if(mysqli_num_rows($result) == 1)
         {
             header("location: ..\..\userprofile.php");
-            setcookie('loggedin',$username,time()+3600);
+            setcookie('loggedin',$username,time()+(60*60*24));
         }else {
             echo "Incorrect username or password.";
         }
