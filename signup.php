@@ -2,7 +2,7 @@
 
 <main>
     <div class="login-form">
-        <form action="assets/scripts/newaccount.php" method="post" oninput='password2.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")'>
+        <form action="newaccount.php" method="post" oninput='password2.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")'>
             <h2 class="text-center">Sign Up</h2>
             <div class="form-group">
                 <input type="text" class="form-control" name="emailaddress" placeholder="Email Address" required="required">

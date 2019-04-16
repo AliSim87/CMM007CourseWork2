@@ -3,5 +3,5 @@ session_start();
 session_destroy();
 setcookie('loggedin', '',time()+3600);
 setcookie('accesslevel','',time()+3600);
-header("location: ..\..\index.php");
+header("location: index.php");
 ?>
