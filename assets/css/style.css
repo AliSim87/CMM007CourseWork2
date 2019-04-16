@@ -11,12 +11,7 @@
 
 .jumbotext {
     background-color: rgba(222,220,233,0.8);
-}
-
-@media (min-width: 576px) {
-    .jumbotron {
-        padding: 6rem 2rem;
-    }
+    padding: 30px;
 }
 
 .fakeimg {
