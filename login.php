@@ -2,7 +2,7 @@
 
 <main>
     <div class="login-form">
-        <form action="assets/scripts/loginauthentication.php" method="post">
+        <form action="loginauthentication.php" method="post">
             <h2 class="text-center">Log in</h2>
             <div class="form-group">
                 <input type="text" class="form-control" name="username" placeholder="Username" required="required">
