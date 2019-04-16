@@ -14,7 +14,8 @@
             setcookie('loggedin',$username,time()+3600);
             $sql="SELECT user_level FROM users WHERE username='$username' and password='$password'";
             $result=mysqli_query($sql);
-            $userlevel = 'submission';
+            $row=mysqli_fetch_object($result);
+            $userlevel = $row->userlevel;
             setcookie('accesslevel',$userlevel,time()+3600);
         }else {
             echo "Incorrect username or password.";
