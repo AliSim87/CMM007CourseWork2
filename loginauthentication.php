@@ -12,11 +12,12 @@
         {
             header("location: userprofile.php"); // Redirecting To another Page
             setcookie('loggedin',$username,time()+3600);
-            $sql="SELECT user_level FROM users WHERE username='$username' and password='$password'";
-            $result=mysqli_query($sql);
-            $row=mysqli_fetch_object($result);
-            $userlevel = $row->userlevel;
-            setcookie('accesslevel',$userlevel,time()+3600);
+            $sql="SELECT * FROM users WHERE username='AliSim'";
+            $result=$db->query($sql);
+            while($row = $result->fetch_array()){
+                $userlevel = $row['user_level'];
+                setcookie('accesslevel',$userlevel,time()+3600);
+            }
         }else {
             echo "Incorrect username or password.";
         }
