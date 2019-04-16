@@ -2,16 +2,46 @@
 
 <main>
     <div class="login-form">
-        <form action="addimage.php" method="post" enctype="multipart/form-data">
+        <form action="addimage.php" id="imageupload" method="post" enctype="multipart/form-data">
             <h2 class="text-center">Image Upload</h2>
             <div class="form-group">
-                Select Image File to Upload:
+                <p>Select Image File to Upload:</p>
                 <input type="file" class="form-control" name="file">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Title" name="imagetitle">
+            </div>
+            <div class="form-group">
+                <p>Please select a category:</p>
+                <div>
+                    <input type="radio" class="form-control" id="landscape" name="landscape" value="landscape" checked>
+                    <label for="landscape">City Landscape</label>
+                </div>
+                <div>
+                    <input type="radio" class="form-control" id="conceptual" name="conceptual" value="conceptual">
+                    <label for="conceptual">Conceptual and Expressive</label>
+                </div>
+                <div>
+                    <input type="radio" class="form-control" id="nature" name="nature" value="nature">
+                    <label for="nature">Nature in Bloom</label>
+                </div>
+                <div>
+                    <input type="radio" class="form-control" id="street" name="street" value="street">
+                    <label for="street">Street Photography</label>
+                </div>
+                <div>
+                    <input type="radio" class="form-control" id="portrait" name="portrait" value="portrait">
+                    <label for="portrait">Portrait on Location</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="">
             </div>
             <div class="form-group">
                 <input type="submit" class="form-control" name="submit" value="Upload">
             </div>
         </form>
+        <textarea rows="4" cols="50" name="comment" form="imageupload">Enter supporting information here...</textarea>
     </div>
 </main>
 <?php include 'footer.php' ?>
