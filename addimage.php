@@ -1,7 +1,7 @@
 <?php include("dbconnect.php");
 $statusMsg = '';
 
-$targetDir = "https://cmm007coursework2sql.azurewebsites.net/userimages/";
+$targetDir = "userimages/";
 $fileName = basename($_FILES["file"]["name"]);
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
