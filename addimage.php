@@ -8,6 +8,8 @@ $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 
 $imagetitle = $_POST['imagetitle'];
+$category = $_POST['category'];
+
 
 if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
     $allowTypes = array('jpg','png','jpeg','gif','pdf');
