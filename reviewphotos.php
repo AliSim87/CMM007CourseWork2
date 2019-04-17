@@ -24,16 +24,16 @@ elseif($_SESSION['user_level'] != 'admin') {
                         $imagetitle = $row["title"];
                         $comments = $row["supporting_info"];
                         $userid = $row["user_id"];
-                        $sql = $db->query("SELECT * FROM users WHERE user_id = '$userid'");
-                        $result=$db->query($sql);
-                        while($row = $result->fetch_array()){
-                            $username = $row['username'];
-                            ?>
+                        // $sql = $db->query("SELECT * FROM users WHERE user_id = '$userid'");
+                        // $result=$db->query($sql);
+                        // while($row = $result->fetch_array()){
+                            //$username = $row['username'];
+                            //?>
                             <img src="<?php echo $imageURL; ?>" alt="<?php echo $imagetitle; ?>" class="img-thumbnail"/>
                             <p><?php echo $imagetitle ?></p>
-                            <p>Uploaded by: <?php echo $username ?></p>
+                            <p>Uploaded by: <?php echo $userid ?></p>
                             <p><?php echo $comments ?></p>
-                    <?php }}
+                    <?php }
                 }else{ ?>
                     <p>No image(s) found...</p>
                 <?php } ?>
