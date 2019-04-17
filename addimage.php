@@ -6,6 +6,7 @@ $targetDir = "userimages/";
 $fileName = basename($_FILES["file"]["name"]);
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+$fileSize = floor(filesize($targetFilePath) / 1024 / 1024, 1);
 
 $imagetitle = $_POST['imagetitle'];
 $category = $_POST['category'];
@@ -20,7 +21,7 @@ while($row = $result->fetch_array()){
 
 if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
     $allowTypes = array('jpg','png','jpeg','gif','pdf');
-    if(in_array($fileType, $allowTypes)){
+    if(in_array($fileType, $allowTypes) && $fileSize < 10){
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
             $insert = $db->query("INSERT into images (user_id, file_name, title, category, supporting_info) VALUES ('$user_id','".$fileName."','$imagetitle','$category','$comment')");
             if($insert){
@@ -38,7 +39,7 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
     $statusMsg = 'Please select a file to upload.';
 }
 
-echo $statusMsg, $imagetitle, $category. $comment, $username, $user_id;
+echo $statusMsg;
 
 ?>
 
