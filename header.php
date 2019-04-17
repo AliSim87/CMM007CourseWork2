@@ -29,15 +29,15 @@
                 </li>
             </ul>
             <?php
-            if (isset($_SESSION['loggedin'])){
-                echo '<ul class="nav navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="userprofile.php"><span class="fas fa-user"></span> &nbsp' . $_COOKIE["loggedin"] . '</a> </li>
-                        <li class="nav-item"><a class="nav-link" href="logout.php"><span class="fas fa-sign-out-alt"></span> Log Out</a></li></ul>';
-            }
-            else {
+            if (!isset($_SESSION['loggedin'])){
                 echo '<ul class="nav navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="signup.php"><span class="fas fa-user-plus"></span> Sign Up</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.php"><span class="fas fa-sign-in-alt"></span> Login</a></li>
                 </ul>';
+                }
+            else {
+                echo '<ul class="nav navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="userprofile.php"><span class="fas fa-user"></span> &nbsp' . $_COOKIE["loggedin"] . '</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="logout.php"><span class="fas fa-sign-out-alt"></span> Log Out</a></li></ul>';
             }
             ?>
 
