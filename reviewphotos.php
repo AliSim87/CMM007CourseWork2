@@ -22,7 +22,7 @@ elseif($_SESSION['user_level'] != 'admin') {
                     while($row = $query->fetch_assoc()){
                         $imageURL = 'userimages/'.$row["file_name"];
                         ?>
-                        <img src="<?php echo $imageURL; ?>" alt="" />
+                        <img src="<?php echo $imageURL; ?>" alt="" class="img-thumbnail"/>
                     <?php }
                 }else{ ?>
                     <p>No image(s) found...</p>
