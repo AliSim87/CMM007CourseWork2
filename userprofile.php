@@ -1,9 +1,10 @@
 <?php include 'header.php' ?>
 <?php
-    if(!isset($_COOKIE['accesslevel'])) {
+    session_start();
+    if(!isset($_SESSION['user_level'])) {
         header("Location:login.php");
         }
-    elseif($_COOKIE['accesslevel'] != 'submission') {
+    elseif($_SESSION['user_level'] != 'submission') {
         header("Location:unauthorised.php");
     }
 ?>
