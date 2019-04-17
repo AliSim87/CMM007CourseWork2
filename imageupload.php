@@ -1,10 +1,4 @@
 <?php include 'header.php' ?>
-<?php
-if(isset($_COOKIE['accesslevel']) == 'submission'){
-    header("Location:Login.php");
-}
-?>
-
 
 <main>
     <div class="login-form">
