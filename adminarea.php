@@ -1,5 +1,4 @@
-<?php include 'header.php' ?>
-<?php
+<?php include 'header.php';
 session_start();
 if(!isset($_SESSION['user_level'])) {
     header("Location:login.php");

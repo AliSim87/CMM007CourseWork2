@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-8">
                     <h2>Great Prizes Available</h2>
-                    <p>The Blooming Big Aberdeen Photo Competition, created by ACVO, is a chance for young Aberdonians to express their experiences of the City and its people.  The Blooming Big Aberdeen competition is open to anyone aged between 16 and 25 living in Aberdeen City.</p>
+                    <p>The Blooming Big Aberdeen Photo Competition, is a chance for young Aberdonians to express their experiences of the City and its people.  The Blooming Big Aberdeen competition is open to anyone aged between 16 and 25 living in Aberdeen City.</p>
                     <p>Aberdeen Football Club are delighted to provide exclusive and unique access to photograph Russell Anderson and players behind-the-scenes at Pittodrie as a top  Blooming Big Aberdeen prize</p>
                     <h2>The competition is free to enter</h2>
                     <p>You must be currently living in Aberdeen to enter the competition. You must be between your 16th and 25th birthdays to enter the competition.</p>
