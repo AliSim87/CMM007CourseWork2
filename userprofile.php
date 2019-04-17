@@ -4,7 +4,7 @@
         header("Location:login.php");
         }
     elseif($_COOKIE['accesslevel'] != 'submission') {
-        heaer("Location:unauthorised.php");
+        header("Location:unauthorised.php");
     }
 ?>
 <main>
