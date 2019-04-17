@@ -12,7 +12,7 @@
         {
             header("location: userprofile.php"); // Redirecting To another Page
             setcookie('loggedin',$username,time()+3600);
-            $sql="SELECT * FROM users WHERE username='AliSim'";
+            $sql="SELECT * FROM users WHERE username='$username'";
             $result=$db->query($sql);
             while($row = $result->fetch_array()){
                 $userlevel = $row['user_level'];

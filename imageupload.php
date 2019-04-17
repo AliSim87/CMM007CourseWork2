@@ -1,4 +1,10 @@
 <?php include 'header.php' ?>
+<?php
+if(isset($_COOKIE['accesslevel']) == 'submission'){
+    header("Location:Login.php");
+}
+?>
+
 
 <main>
     <div class="login-form">
@@ -14,23 +20,23 @@
             <div class="form-group">
                 <p>Please select a category:</p>
                 <div>
-                    <input type="radio" id="landscape" name="landscape" value="landscape" checked>
+                    <input type="radio" name="category" value="landscape" checked>
                     <label for="landscape">City Landscape</label>
                 </div>
                 <div>
-                    <input type="radio" id="conceptual" name="conceptual" value="conceptual">
+                    <input type="radio" name="category" value="conceptual">
                     <label for="conceptual">Conceptual and Expressive</label>
                 </div>
                 <div>
-                    <input type="radio" id="nature" name="nature" value="nature">
+                    <input type="radio" name="category" value="nature">
                     <label for="nature">Nature in Bloom</label>
                 </div>
                 <div>
-                    <input type="radio" id="street" name="street" value="street">
+                    <input type="radio" name="category" value="street">
                     <label for="street">Street Photography</label>
                 </div>
                 <div>
-                    <input type="radio" id="portrait" name="portrait" value="portrait">
+                    <input type="radio" name="category" value="portrait">
                     <label for="portrait">Portrait on Location</label>
                 </div>
             </div>
