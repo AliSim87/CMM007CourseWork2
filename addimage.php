@@ -10,6 +10,7 @@ $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 $imagetitle = $_POST['imagetitle'];
 $category = $_POST['category'];
 $comment = $_POST['comment'];
+$user_id = "";
 $username = $_COOKIE['loggedin'];
 $sql="SELECT * FROM users WHERE username='$username'";
 $result=$db->query($sql);
@@ -37,9 +38,7 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
     $statusMsg = 'Please select a file to upload.';
 }
 
-echo $statusMsg;
+echo $statusMsg, $imagetitle, $category. $comment, $username, $user_id;
 
 ?>
-
-// https://www.codexworld.com/upload-store-image-file-in-database-using-php-mysql/
 
