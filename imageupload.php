@@ -6,7 +6,7 @@
             <h2 class="text-center">Image Upload</h2>
             <div class="form-group">
                 <p>Select Image File to Upload:</p>
-                <input type="file" class="form-control" name="file">
+                <input type="file" name="file">
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Title" name="imagetitle">

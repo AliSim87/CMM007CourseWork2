@@ -11,7 +11,7 @@
         if(mysqli_num_rows($result) == 1)
         {
             header("location: userprofile.php"); // Redirecting To another Page
-            setcookie('loggedin',$username,time()+3600);
+            $_SESSION['username'] = $username;
             $sql="SELECT * FROM users WHERE username='$username'";
             $result=$db->query($sql);
             while($row = $result->fetch_array()){
