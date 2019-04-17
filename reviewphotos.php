@@ -20,7 +20,7 @@ elseif($_SESSION['user_level'] != 'admin') {
 
                 if($query->num_rows > 0){
                     while($row = $query->fetch_assoc()){
-                        $imageURL = 'uploads/'.$row["file_name"];
+                        $imageURL = 'userimages/'.$row["file_name"];
                         ?>
                         <img src="<?php echo $imageURL; ?>" alt="" />
                     <?php }
