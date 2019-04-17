@@ -16,7 +16,7 @@ elseif($_SESSION['user_level'] != 'admin') {
                 <?php
                 include 'dbconnect.php';
 
-                $query = $db->query("SELECT * FROM images users WHERE approved=0 AND images.user_id=users.user_id");
+                $query = $db->query("SELECT * FROM images INNER JOIN users WHERE approved=0 AND images.user_id=users.user_id");
 
                 if($query->num_rows > 0){
                     while($row = $query->fetch_assoc()){
