@@ -29,7 +29,7 @@
                 </li>
             </ul>
             <?php
-            if (isset($_COOKIE['loggedin'])){
+            if (isset($_SESSION['loggedin'])){
                 echo '<ul class="nav navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="userprofile.php"><span class="fas fa-user"></span> &nbsp' . $_COOKIE["loggedin"] . '</a> </li>
                         <li class="nav-item"><a class="nav-link" href="logout.php"><span class="fas fa-sign-out-alt"></span> Log Out</a></li></ul>';
             }
