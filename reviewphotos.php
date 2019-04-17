@@ -1,5 +1,5 @@
-<?php include 'header.php' ?>
 <?php
+include 'header.php';
 session_start();
 if(!isset($_SESSION['user_level'])) {
     header("Location:login.php");
@@ -7,6 +7,7 @@ if(!isset($_SESSION['user_level'])) {
 elseif($_SESSION['user_level'] != 'admin') {
     header("Location:unauthorised.php");
 }
+
 ?>
 
 <main>
@@ -26,6 +27,7 @@ elseif($_SESSION['user_level'] != 'admin') {
                         $comments = $row["supporting_info"];
                         $userid = $row["user_id"];
                         $username = $row['username'];
+                        $image_id = $row['image_id'];
 
                         ?>
 
@@ -33,6 +35,12 @@ elseif($_SESSION['user_level'] != 'admin') {
                         <p><?php echo $imagetitle ?></p>
                         <p>Uploaded by: <?php echo $username ?></p>
                         <p><?php echo $comments ?></p>
+                        <span>
+                            <form method="post">
+                                <input type="hidden" name="approve">
+                                <button type="submit">Approve</button>
+                            </form>
+                        </span>
                     <?php }
                 }else{ ?>
                     <p>No image(s) found...</p>
