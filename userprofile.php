@@ -3,7 +3,7 @@
     if(!isset($_COOKIE['accesslevel'])) {
         header("Location:login.php");
         }
-    elseif(isset($_COOKIE['accesslevel']) != 'submission') {
+    elseif($_COOKIE['accesslevel'] != 'submission') {
         heaer("Location:unauthorised.php");
     }
 ?>
