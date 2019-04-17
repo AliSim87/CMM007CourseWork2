@@ -22,7 +22,7 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
     $allowTypes = array('jpg','png','jpeg','gif','pdf');
     if(in_array($fileType, $allowTypes)){
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
-            $insert = $db->query("INSERT into images (user_id, file_name, title, category, supporting_info) VALUES ('$user_id''".$fileName."','$imagetitle', '$category','$comment'");
+            $insert = $db->query("INSERT into images (user_id, file_name, title, category, supporting_info) VALUES ('$user_id','".$fileName."','$imagetitle','$category','$comment'");
             if($insert){
                 $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
             }else{
