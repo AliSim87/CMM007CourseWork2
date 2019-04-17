@@ -10,7 +10,7 @@ $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 $imagetitle = $_POST['imagetitle'];
 $category = $_POST['category'];
 $comment = $_POST['comment'];
-$username = $_COOKIE['loggedin']
+$username = $_COOKIE['loggedin'];
 $sql="SELECT * FROM users WHERE username='$username'";
 $result=$db->query($sql);
 while($row = $result->fetch_array()){

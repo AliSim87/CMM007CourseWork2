@@ -1,8 +1,11 @@
 <?php include 'header.php' ?>
 <?php
-    if(!isset($_COOKIE['accesslevel']) && isset($_COOKIE['accesslevel']) != 'submission'){
-        header("Location:Login.php");
+    if(!isset($_COOKIE['accesslevel'])) {
+        header("Location:login.php");
         }
+    elseif(isset($_COOKIE['accesslevel']) != 'submission') {
+        heaer("Location:unauthorised.php");
+    }
 ?>
 <main>
     <div class="container mt-5">
