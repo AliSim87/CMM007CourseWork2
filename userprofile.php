@@ -1,6 +1,6 @@
 <?php include 'header.php' ?>
 <?php
-    if(isset($_COOKIE['accesslevel']) == 'submission'){
+    if(isset($_COOKIE['accesslevel']) != 'submission' || !isset($_COOKIE)){
         header("Location:Login.php");
         }
 ?>
