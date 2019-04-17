@@ -21,7 +21,7 @@ while($row = $result->fetch_array()){
 
 if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
     $allowTypes = array('jpg','png','jpeg','gif','pdf');
-    if(in_array($fileType, $allowTypes) && $fileSize < 10){
+    if(in_array($fileType, $allowTypes) && $fileSize < 3){
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
             $insert = $db->query("INSERT into images (user_id, file_name, title, category, supporting_info) VALUES ('$user_id','".$fileName."','$imagetitle','$category','$comment')");
             if($insert){
