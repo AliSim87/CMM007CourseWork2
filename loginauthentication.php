@@ -15,9 +15,11 @@
             $sql="SELECT * FROM users WHERE username='$username'";
             $result=$db->query($sql);
             while($row = $result->fetch_array()){
+                $firstname = $row['firstname'];
                 $userlevel = $row['user_level'];
                 session_start();
                 $_SESSION['user_level'] = $userlevel;
+                $_SESSION['firstname'] = $firstname;
             }
         }else {
             echo "Incorrect username or password.";
