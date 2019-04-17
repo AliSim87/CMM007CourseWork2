@@ -12,11 +12,11 @@ elseif($_SESSION['user_level'] != 'admin') {
         <div class="container mt-5">
             <div class="row">
                 <div>
-                    <h2>Welcome Back <?php echo $_COOKIE['loggedin'] ?></h2>
+                    <h2>Welcome Back <?php print $_SESSION['firstname'] ?></h2>
                     <p>What would you like to do?</p>
                     <ul>
                         <li><a href="#">Add new judge</a></li>
-                        <li><a href="#">Review photos</a></li>
+                        <li><a href="reviewphotos.php">Review photos</a></li>
                     </ul>
                 </div>
             </div>

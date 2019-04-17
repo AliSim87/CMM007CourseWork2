@@ -1,17 +1,9 @@
-<?php
-include("dbconnect.php");
-
-$username = "AliSim";
-$password = "password1";
-
-$sql="SELECT * FROM users WHERE username='AliSim'";
-$result=$db->query($sql);
-while($row = $result->fetch_array()){
-    $userlevel = $row['user_level'];
-    echo "<p>{$userlevel}</p>";
-}
-?>
-
-<p>6</p>
-
-
+// TO DO
+// Judges Area
+// Judges Score Card
+// Admin Approval + email
+// Pagnation after upload
+// Gallery
+// Fix max file size
+// File structure
+// Text for site
