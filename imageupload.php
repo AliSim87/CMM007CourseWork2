@@ -1,4 +1,4 @@
-<?php include 'header.php' ?>
+<?php $pageTitle = "Upload Image"; include 'header.php' ?>
 
 <main>
     <div class="login-form">

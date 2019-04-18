@@ -1,4 +1,4 @@
-<?php include 'header.php';
+<?php $pageTitle = "Sign Up"; include 'header.php';
 session_start();
 ?>
 
