@@ -35,11 +35,16 @@ elseif($_SESSION['user_level'] != 'admin') {
                         <p><?php echo $imagetitle ?></p>
                         <p>Uploaded by: <?php echo $username ?></p>
                         <p><?php echo $comments ?></p>
-                        <span>
+                        <div>
                             <form method="post" action="approveimage.php?image_id=<?php echo $image_id ?>">
                                 <button type="submit" class="btn btn-primary btn-block">Approve</button>
                             </form>
-                        </span>
+                        </div>
+                        <div>
+                            <form method="post" action="rejectimage.php?image_id=<?php echo $image_id ?>">
+                                <button type="submit" class="btn btn-primary btn-block">Approve</button>
+                            </form>
+                        </div>
                     <?php }
                 }else{ ?>
                     <p>No image(s) found...</p>

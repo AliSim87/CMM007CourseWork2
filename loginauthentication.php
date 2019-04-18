@@ -21,7 +21,7 @@
                 $_SESSION['firstname'] = $firstname;
 
                 if ($_SESSION['user_level'] == 'submission') {
-                    header("location: userprofile.php"); // Redirecting To another Page
+                    header("location: userprofile.php");
                 }
                 elseif ($_SESSION['user_level'] == 'admin') {
                     header("location: adminarea.php");
