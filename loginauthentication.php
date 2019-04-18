@@ -27,7 +27,7 @@
                     header("location: adminarea.php");
                 }
                 elseif ($_SESSION['user_level'] == 'judge') {
-
+                    header("location: judgearea.php");
                 }
                 else {
                     header("location: unauthorised.php");

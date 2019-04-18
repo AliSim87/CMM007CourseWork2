@@ -37,7 +37,7 @@ elseif($_SESSION['user_level'] != 'admin') {
                         <p><?php echo $comments ?></p>
                         <span>
                             <form method="post">
-                                <input type="hidden" name="approve">
+                                <input action="approveimage.php?image_id=<?php $image_id ?>" type="hidden" name="approve">
                                 <button type="submit">Approve</button>
                             </form>
                         </span>
