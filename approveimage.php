@@ -2,7 +2,7 @@
 
 $image_id = $_GET["image_id"];
 
-$sql="UPDATE images SET approved = b'1' WHERE image_id = '$image_id'";
+$sql="UPDATE images SET support_info = 'hello you' WHERE image_id = '$image_id'";
 
 if (mysqli_query($db, $sql)) {
 } else {
