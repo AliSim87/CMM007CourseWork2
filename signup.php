@@ -31,6 +31,24 @@
             <div class="form-group">
                 <input type="text" class="form-control" name="postcode" placeholder="Postcode" required="required">
             </div>
+            <?php if($_SESSION['user_level'] == 'admin') {
+                ?>
+            <div class="form-group">
+                <p>Please select user level:</p>
+                <div>
+                    <input type="radio" name="user_level" value="user" checked>
+                    <label for="user">User</label>
+                </div>
+                <div>
+                    <input type="radio" name="user_level" value="judge">
+                    <label for="judge">Judge</label>
+                </div>
+                <div>
+                    <input type="radio" name="user_level" value="admin">
+                    <label for="admin">Admin</label>
+                </div>
+            </div>
+            <?php } ?>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
             </div>
