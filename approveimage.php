@@ -9,3 +9,7 @@ if(isset($_POST["submit"])) {
         echo "Error: " . $sql . "<br>" . mysqli_error($db);
     }
 }
+
+echo $image_id;
+
+?>
