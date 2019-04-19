@@ -12,7 +12,7 @@
         <div class="row">
             <div>
                 <h2>Welcome Back <?php print $_SESSION['firstname'] ?></h2>
-                <p><a href="imageupload.php"></a>Upload a photo</p>
+                <p><a href="imageupload.php">Upload a photo</a></p>
             </div>
         </div>
     </div>
