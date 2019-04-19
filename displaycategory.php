@@ -16,7 +16,7 @@ include 'header.php'; ?>
                 <?php
                 include 'dbconnect.php';
 
-                $query = $db->query("SELECT * FROM images INNER JOIN users WHERE category=$category AND images.user_id=users.user_id");
+                $query = $db->query("SELECT * FROM images INNER JOIN users WHERE category='$category' AND images.user_id=users.user_id");
 
                 if($query->num_rows > 0){
                 while($row = $query->fetch_assoc()) {
@@ -33,7 +33,7 @@ include 'header.php'; ?>
                     <img src="<?php echo $imageURL; ?>" alt="<?php echo $imagetitle; ?>" class="img-thumbnail"/>
                     <p><?php echo $imagetitle ?></p>
                     <p>Uploaded by: <?php echo $username ?></p>
-                    <?php if ($_SESSION['user_level'] != 'admin') { ?>
+                    <?php if ($_SESSION['user_level'] != 'judge') { ?>
                         <div>
                             <form method="post" action="judgeimage.php?image_id=<?php echo $image_id ?>">
                                 <button type="submit" class="btn btn-primary btn-block">Judge this photo?</button>
@@ -47,3 +47,5 @@ include 'header.php'; ?>
         </div>
     </div>
 </main>
+
+<?php include 'footer.php'; ?>
