@@ -12,7 +12,6 @@ elseif($_SESSION['user_level'] != 'judge') {
                     <h2>Welcome Back <?php print $_SESSION['firstname'] ?></h2>
                     <p>Please choose a category to judge</p>
                     <div class="row">
-                        <div>
                             <h2>Gallery</h2>
                             <div class="col-4">
                                 <img src="assets/images/citylandscape.jpg" alt="City Landscape" class="img-thumbnail">
@@ -26,10 +25,8 @@ elseif($_SESSION['user_level'] != 'judge') {
                                 <img src="assets/images/nature.jpg" alt="Nature in Bloom" class="img-thumbnail">
                                 <h4>Nature in Bloom</h4>
                             </div>
-                        </div>
                     </div>
                     <div class="row">
-                        <div>
                             <h2>Gallery</h2>
                             <div class="col-4">
                                 <img src="assets/images/street.jpg" alt="Street Photography" class="img-thumbnail">
@@ -41,7 +38,6 @@ elseif($_SESSION['user_level'] != 'judge') {
                             </div>
                             <div class="col-4">
                             </div>
-                        </div>
                     </div>
         </div>
     </main>
