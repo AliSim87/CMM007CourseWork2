@@ -8,9 +8,10 @@ if($query->num_rows > 0) {
     while ($row = $query->fetch_assoc()) {
         $email = $row["emailaddress"];
         $firstname = $row["firstname"];
+        $imagetitle = $row["imagetitle"];
 
         $subject = 'Sorry has been rejected';
-        $message = 'Hi ' . $firstname . '. We are sorry but your image has been rejected from our competition.  If you feel this is unfair or would like more infomation about the rejection email: admin@bigbloomingaberdeen.org.uk';
+        $message = 'Hi ' . $firstname . '. We are sorry but your image ' .$imagetitle. ' has been rejected from our competition.  If you feel this is unfair or would like more information about the rejection email: admin@bigbloomingaberdeen.org.uk';
 
         mail($email, $subject, $message);
 

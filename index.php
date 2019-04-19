@@ -21,7 +21,7 @@
                     <p>You must be currently living in Aberdeen to enter the competition. You must be between your 16th and 25th birthdays to enter the competition.</p>
                 <p><a href="aboutus.php">Read More</a></p>
             </div>
-            <div class="col-4"><img class="img-responsive img-homepage" src="assets/images/IMG_3878lynnwright.jpg" alt="Hug on Saint Nicolas Centre"></div>
+            <div class="col-4"><img class="img-responsive img-homepage" src="assets/images/homepageimage.jpg" alt="Hug on Saint Nicolas Centre"></div>
         </div>
     </div>
 </main>

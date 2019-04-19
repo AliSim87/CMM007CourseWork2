@@ -50,6 +50,7 @@ include 'header.php';
                 <img src="userimages/<?php echo $fileName?>" alt="<?php echo $imagetitle?>" class="img-thumbnail" />
                 <p><?php echo $statusMsg; ?></p>
                 <p><a href="imageupload.php">Upload new image?</a></p>
+                <p><a href="index.php">Return to home page?</a></p>
             </div>
         </div>
     </div>
