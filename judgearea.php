@@ -9,8 +9,6 @@ elseif($_SESSION['user_level'] != 'judge') {
 ?>
     <main>
         <div class="container mt-5">
-            <div class="row">
-                <div>
                     <h2>Welcome Back <?php print $_SESSION['firstname'] ?></h2>
                     <p>Please choose a category to judge</p>
                     <div class="row">
@@ -45,8 +43,6 @@ elseif($_SESSION['user_level'] != 'judge') {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
         </div>
     </main>
 
