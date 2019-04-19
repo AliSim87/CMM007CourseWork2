@@ -39,7 +39,23 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
     $statusMsg = 'Please select a file to upload.';
 }
 
-echo $statusMsg;
+include 'header.php';
+
+?>
+<main>
+    <div class="container mt-5">
+        <div class="row">
+            <div>
+                <p><?php echo $statusMsg; ?></p>
+                <p><a href="imageupload.php">Upload new image?</a></p>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+include 'footer.php';
 
 ?>
 
