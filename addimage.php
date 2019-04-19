@@ -42,10 +42,12 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
 include 'header.php';
 
 ?>
+
 <main>
     <div class="container mt-5">
         <div class="row">
             <div>
+                <img src="userimages/<?php echo $fileName?>" alt="<?php echo $imagetitle?>" class="img-thumbnail" />
                 <p><?php echo $statusMsg; ?></p>
                 <p><a href="imageupload.php">Upload new image?</a></p>
             </div>
@@ -53,9 +55,5 @@ include 'header.php';
     </div>
 </main>
 
-
-
-include 'footer.php';
-
-?>
+<? include 'footer.php'; ?>
 

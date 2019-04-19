@@ -41,7 +41,7 @@ elseif($_SESSION['user_level'] != 'admin') {
                         </div>
                         <div>
                             <form method="post" action="rejectimage.php?image_id=<?php echo $image_id ?>">
-                                <button type="submit" class="btn btn-primary btn-block">Approve</button>
+                                <button type="submit" class="btn btn-danger btn-block">Reject</button>
                             </form>
                         </div>
                     <?php }
