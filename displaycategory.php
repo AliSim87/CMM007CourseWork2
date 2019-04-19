@@ -23,8 +23,6 @@ include 'header.php'; ?>
 
                     $imageURL = 'userimages/' . $row["file_name"];
                     $imagetitle = $row["title"];
-                    $comments = $row["supporting_info"];
-                    $userid = $row["user_id"];
                     $username = $row['username'];
                     $image_id = $row['image_id'];
 
