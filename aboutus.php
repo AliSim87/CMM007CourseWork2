@@ -1,4 +1,7 @@
-<?php $pageTitle = "About Us"; include 'header.php' ?>
+<?php
+$pageTitle = "About Us";
+include 'header.php'
+?>
 
 <main>
     <div class="container mt-5">
@@ -12,4 +15,6 @@
     </div>
 </main>
 
-<?php include 'footer.php' ?>
+<?php
+include 'footer.php'
+?>

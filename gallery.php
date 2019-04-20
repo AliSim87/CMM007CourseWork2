@@ -1,4 +1,7 @@
-<?php $pageTitle = "Gallery"; include 'header.php' ?>
+<?php
+$pageTitle = "Gallery";
+include 'header.php'
+?>
 
 <main>
     <div class="container mt-5">
@@ -31,4 +34,6 @@
     </div>
 </main>
 
-<?php include 'footer.php' ?>
+<?php
+include 'footer.php'
+?>

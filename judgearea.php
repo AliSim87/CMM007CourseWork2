@@ -1,4 +1,4 @@
-<?php $pageTitle = "Admin Area";
+<?php $pageTitle = "Judge Area";
 include 'header.php';
 session_start();
 if (!isset($_SESSION['user_level'])) {

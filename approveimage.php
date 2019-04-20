@@ -7,15 +7,15 @@ $sql="SELECT * FROM images INNER JOIN users WHERE image_id = '$image_id' AND ima
 if($query->num_rows > 0) {
     while ($row = $query->fetch_assoc()) {
         $email = $row["emailaddress"];
-        $firstname = $row["firstname"];
-        $imagetitle = $row["imagetitle"];
+        $firstName = $row["firstname"];
+        $imageTitle = $row["imagetitle"];
 
         $subject = 'Your image has been Approved';
-        $message = 'Hi ' . $firstname . '. We are happy to say your image ' .$imagetitle. ' has been approved from our competition.';
+        $message = 'Hi ' . $firstName . '. We are happy to say your image ' .$imageTitle. ' has been approved from our competition.';
         mail($email, $subject, $message);
 
-        $deletefile = 'userimages/'.$row["file_name"];
-        unlink($deletefile) or die("Couldn't delete file");
+        $deleteFile = 'userimages/'.$row["file_name"];
+        unlink($deleteFile) or die("Couldn't delete file");
     }
 }
 
