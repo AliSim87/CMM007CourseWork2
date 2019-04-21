@@ -23,14 +23,15 @@ include 'header.php'; ?>
 
                     $imageURL = 'userimages/' . $row['file_name'];
                     $imageTitle = $row['title'];
-                    $username = $row['username'];
+                    $firstName = $row['firstname'];
+                    $surname = $row['lastname'];
                     $image_id = $row['image_id'];
 
                     ?>
 
                     <img src="<?php echo $imageURL; ?>" alt="<?php echo $imageTitle; ?>" class="img-thumbnail"/>
                     <p><?php echo $imageTitle ?></p>
-                    <p>Uploaded by: <?php echo $username ?></p>
+                    <p>Uploaded by: <?php echo $firstName ." ". $surname ?></p>
                     <?php if ($_SESSION['user_level'] == 'judge') { ?>
                         <div>
                             <form method="post" action="judgeimage.php?image_id=<?php echo $image_id ?>">
