@@ -1,4 +1,6 @@
-<?php include 'header.php' ?>
+<?php
+$pageTitle = 'Home Page';
+include 'header.php' ?>
 
 <main>
     <div class="jumbotron jumbotron-fluid">
