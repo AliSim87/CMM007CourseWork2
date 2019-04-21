@@ -4,7 +4,7 @@ session_start();
 
 $category = $_GET["category"];
 
-$pagetitle = $category;
+$pageTitle = $category;
 
 include 'header.php'; ?>
 
@@ -21,8 +21,8 @@ include 'header.php'; ?>
                 if($query->num_rows > 0){
                 while($row = $query->fetch_assoc()) {
 
-                    $imageURL = 'userimages/' . $row["file_name"];
-                    $imagetitle = $row["title"];
+                    $imageURL = 'userimages/' . $row['file_name'];
+                    $imagetitle = $row['title'];
                     $username = $row['username'];
                     $image_id = $row['image_id'];
 

@@ -16,7 +16,6 @@ if ($sql->num_rows > 0) {
         $imageURL = 'userimages/' . $row["file_name"];
         $imageTitle = $row["title"];
         $username = $row['username'];
-        $image_id = $row['image_id'];
         $category = $row['category'];
     }
 }
@@ -31,7 +30,7 @@ include 'header.php';
     <div class="container mt-5">
         <div class="row">
             <div>
-                <img src="userimages/<?php echo $imageURL ?>" alt="<?php echo $imageTitle ?>"/>
+                <img src="<?php echo $imageURL ?>" alt="<?php echo $imageTitle ?>"/>
             </div>
             <div>
                 <form action="addjudgement.php" method="post">
