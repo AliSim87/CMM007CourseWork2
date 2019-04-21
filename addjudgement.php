@@ -21,8 +21,8 @@ if(mysqli_num_rows($result) == 1) {
     }
 
     echo $image_id;
-
-    header("location:displaycategory.php?category='$category'.php");
+    $redirectURL = 'displaycategory.php?category='.$category;
+    header("location:" .$redirectURL);
 } else {
     echo "You have already judged this photo";
 }
