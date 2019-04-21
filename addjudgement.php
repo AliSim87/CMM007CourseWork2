@@ -10,7 +10,6 @@ $framing = $_POST['framing'];
 $category = $_POST['category'];
 
 $sql = "SELECT * FROM scores WHERE image_id = '$image_id' user_id = '$user_id'";
-
 $result=mysqli_query($db,$sql);
 if(mysqli_num_rows($result) == 0) {
 
@@ -20,9 +19,8 @@ if(mysqli_num_rows($result) == 0) {
         echo "Error: " . $sql . "<br>" . mysqli_error($db);
     }
 
-    header("location:displaycategory.php?category=$category.php");
-}
-else {
+    header("location:displaycategory.php?category='$category'.php");
+} else {
     echo "You have already judged this photo";
 }
 
