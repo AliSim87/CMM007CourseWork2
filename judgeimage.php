@@ -35,8 +35,8 @@ include 'header.php';
             </div>
             <div>
                 <form action="addjudgement.php" method="post">
-                    <input type="hidden" id="image_id" name="<?php echo $image_id ?>" value="<?php echo $image_id ?>">
-                    <input type="hidden" id="category" name="<?php echo $category ?>" value="<?php echo $category ?>">
+                    <input type="hidden" name="<?php echo $image_id ?>" value="<?php echo $image_id ?>">
+                    <input type="hidden" name="<?php echo $category ?>" value="<?php echo $category ?>">
                     Effectiveness: <input type="range" size="2" name="effectiveness" min="1" max="5" value="3">
                     Quality: <input type="range" size="2" name="quality" min="1" max="5" value="3">
                     Lighting: <input type="range" size="2" name="lighting" min="1" max="5" value="3">
