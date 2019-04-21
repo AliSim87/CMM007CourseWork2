@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'dbconnect.php';
 
 $image_id = $_POST['image_id'];
