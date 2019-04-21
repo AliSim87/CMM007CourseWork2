@@ -58,7 +58,6 @@
                     <li class="nav-item"><a class="nav-link" href="login.php"><span class="fas fa-sign-in-alt"></span> Login</a></li>
                     </ul>';
                 }
-                session_destroy();
                 ?>
             </div>
         </div>

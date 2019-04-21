@@ -3,7 +3,7 @@
 <main>
     <div class="container mt-5">
         <div class="row">
-            <div>
+            <div class="col">
                 <h2>Guidelines</h2>
                 <p>You can enter in any of the following categories:</p>
                 <p><strong>City Landscape:</strong> The city in question should be Aberdeen!</p>
