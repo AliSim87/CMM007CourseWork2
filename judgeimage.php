@@ -13,8 +13,8 @@ $sql = "SELECT * FROM images INNER JOIN users WHERE image_id = '$image_id' AND i
 
 if ($sql->num_rows > 0) {
     while ($row = $sql->fetch_assoc()) {
-        $imageURL = 'userimages/' . $row["file_name"];
-        $imageTitle = $row["title"];
+        $imageURL = 'userimages/' . $row['file_name'];
+        $imageTitle = $row['title'];
         $username = $row['username'];
         $category = $row['category'];
     }

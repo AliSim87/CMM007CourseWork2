@@ -29,7 +29,7 @@ include 'header.php'; ?>
                     ?>
 
                     <img src="<?php echo $imageURL; ?>" alt="<?php echo $imageTitle; ?>" class="img-thumbnail"/>
-                    <p><?php echo $imageTitle ?></p>
+                    <?php echo $imageTitle ?>
                     <p>Uploaded by: <?php echo $username ?></p>
                     <?php if ($_SESSION['user_level'] == 'judge') { ?>
                         <div>
