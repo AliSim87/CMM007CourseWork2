@@ -22,7 +22,7 @@ if(mysqli_num_rows($result) == 0) {
 
     echo $image_id;
 
-    // header("location:displaycategory.php?category='$category'.php");
+    header("location:displaycategory.php?category='$category'.php");
 } else {
     echo "You have already judged this photo";
 }

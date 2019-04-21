@@ -16,10 +16,10 @@ include 'header.php'; ?>
                 <?php
                 include 'dbconnect.php';
 
-                $query = $db->query("SELECT * FROM images INNER JOIN users WHERE category='$category' AND images.user_id=users.user_id");
+                $sql = $db->query("SELECT * FROM images INNER JOIN users WHERE category='$category' AND images.user_id=users.user_id");
 
-                if($query->num_rows > 0){
-                while($row = $query->fetch_assoc()) {
+                if($sql->num_rows > 0){
+                while($row = $sql->fetch_assoc()) {
 
                     $imageURL = 'userimages/' . $row['file_name'];
                     $imageTitle = $row['title'];
