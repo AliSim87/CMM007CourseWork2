@@ -34,7 +34,7 @@ include 'header.php';
                 <img src="userimages/<?php echo $fileName ?>" alt="<?php echo $imageTitle ?>" class="img-thumbnail"/>
             </div>
             <div>
-                <form action="judgephoto.php" method="post">
+                <form action="judgeimage.php" method="post">
                     <input type="hidden" id="image_id" name="image_id" value="<?php echo $image_id ?>">
                     <input type="hidden" id="category" name="category" value="<?php echo $category ?>">
                     Effectiveness: <input type="range" size="2" name="effectiveness" min="1" max="5" value="3">
