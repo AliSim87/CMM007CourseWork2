@@ -10,7 +10,7 @@ $lighting = $_POST['lighting'];
 $framing = $_POST['framing'];
 $category = $_POST['category'];
 
-$sql = "SELECT * FROM scores WHERE image_id = '$image_id' user_id = '$user_id'";
+$sql = "SELECT * FROM scores WHERE image_id = '$image_id' AND user_id = '$user_id'";
 $result=mysqli_query($db,$sql);
 if(mysqli_num_rows($result) == 0) {
 
