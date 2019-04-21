@@ -12,7 +12,7 @@ $category = $_POST['category'];
 
 $sql = "SELECT * FROM scores WHERE image_id = '$image_id' user_id = '$user_id'";
 $result=mysqli_query($db,$sql);
-if(mysqli_num_rows($result) != 0) {
+if(mysqli_num_rows($result) == 1) {
 
     $sql = "INSERT INTO scores (image_id,user_id,effectiveness,quality,lighting,framing) VALUES ('$image_id','$user_id','$effectiveness','$quality','$lighting','$framing')";
     if (mysqli_query($db, $sql)) {

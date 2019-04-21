@@ -9,13 +9,11 @@ if (!isset($_SESSION['user_level'])) {
 
 $image_id = $_GET['image_id'];
 
-$sql = "SELECT * FROM images INNER JOIN users WHERE image_id = '$image_id' AND images.user_id=users.user_id";
+$sql = $db->query("SELECT * FROM images INNER JOIN users WHERE image_id = '$image_id' AND images.user_id=users.user_id");
 
 if ($sql->num_rows > 0) {
     while ($row = $sql->fetch_assoc()) {
         $imageURL = 'userimages/' . $row['file_name'];
-        $imageTitle = $row['title'];
-        $username = $row['username'];
         $category = $row['category'];
     }
 }
