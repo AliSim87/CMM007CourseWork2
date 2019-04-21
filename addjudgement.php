@@ -19,7 +19,9 @@ if(mysqli_num_rows($result) == 0) {
         echo "Error: " . $sql . "<br>" . mysqli_error($db);
     }
 
-    header("location:displaycategory.php?category='$category'.php");
+    echo $image_id;
+
+    // header("location:displaycategory.php?category='$category'.php");
 } else {
     echo "You have already judged this photo";
 }
