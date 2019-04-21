@@ -22,14 +22,14 @@ include 'header.php'; ?>
                 while($row = $query->fetch_assoc()) {
 
                     $imageURL = 'userimages/' . $row['file_name'];
-                    $imagetitle = $row['title'];
+                    $imageTitle = $row['title'];
                     $username = $row['username'];
                     $image_id = $row['image_id'];
 
                     ?>
 
-                    <img src="<?php echo $imageURL; ?>" alt="<?php echo $imagetitle; ?>" class="img-thumbnail"/>
-                    <p><?php echo $imagetitle ?></p>
+                    <img src="<?php echo $imageURL; ?>" alt="<?php echo $imageTitle; ?>" class="img-thumbnail"/>
+                    <p><?php echo $imageTitle ?></p>
                     <p>Uploaded by: <?php echo $username ?></p>
                     <?php if ($_SESSION['user_level'] == 'judge') { ?>
                         <div>
