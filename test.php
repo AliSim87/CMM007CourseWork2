@@ -1,5 +1,4 @@
 // TO DO
-// Judges Score Card*
 // Pagnation after upload
 // Gallery
 // Fix max file size
