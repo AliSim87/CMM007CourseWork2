@@ -17,6 +17,7 @@ if ($sql->num_rows > 0) {
         $imageTitle = $row['title'];
         $username = $row['username'];
         $category = $row['category'];
+        $image_id = $row['image_id'];
     }
 }
 
