@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_level'])) {
     header("Location:unauthorised.php");
 }
 
-$image_id = $_GET["image_id"];
+$image_id = $_GET['image_id'];
 
 $sql = "SELECT * FROM images INNER JOIN users WHERE image_id = '$image_id' AND images.user_id=users.user_id";
 
