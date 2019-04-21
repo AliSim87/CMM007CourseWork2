@@ -1,16 +1,16 @@
-<?php $pageTitle = "Admin Area"; include 'header.php';
+<?php $pageTitle = "Admin Area";
+include 'header.php';
 session_start();
-if(!isset($_SESSION['user_level'])) {
+if (!isset($_SESSION['user_level'])) {
     header("Location:login.php");
-}
-elseif($_SESSION['user_level'] != 'admin') {
+} elseif ($_SESSION['user_level'] != 'admin') {
     header("Location:unauthorised.php");
 }
 ?>
     <main>
         <div class="container mt-5">
             <div class="row">
-                <div>
+                <div class="col">
                     <h2>Welcome Back <?php print $_SESSION['firstname'] ?></h2>
                     <p>What would you like to do?</p>
                     <ul>
