@@ -1,34 +1,29 @@
-<?php $pageTitle = "Judge Area";
-include 'header.php';
-session_start();
-if (!isset($_SESSION['user_level'])) {
-    header("Location:login.php");
-} elseif ($_SESSION['user_level'] != 'judge') {
-    header("Location:unauthorised.php");
+<?php
+include 'dbconnect.php';
+
+$image_id = $_POST['image_id'];
+$user_id = $_SESSION["user_id"];
+$effectiveness = $_POST['effectiveness'];
+$quality = $_POST['quality'];
+$lighting = $_POST['lighting'];
+$framing = $_POST['framing'];
+$category = $_POST['category'];
+
+$sql = "SELECT * FROM scores WHERE image_id = '$image_id' user_id = '$user_id'";
+
+$result=mysqli_query($db,$sql);
+if(mysqli_num_rows($result) == 1) {
+
+    $sql = "INSERT INTO scores (image_id,user_id,effectiveness,quality,lighting,framing) VALUES ('$image_id','$user_id','$effectiveness','$quality','$lighting','$framing')";
+    if (mysqli_query($db, $sql)) {
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($db);
+    }
+
+    header("location:displaycategory.php?category=$category.php");
+}
+else {
+    echo "You have already judged this photo";
 }
 
-$image_id = $_GET["image_id"];
-
-$sql="SELECT * FROM images INNER JOIN users WHERE image_id = '$image_id' AND images.user_id=users.user_id";
-
-$imageURL = 'userimages/' . $row["file_name"];
-$imageTitle = $row["title"];
-$username = $row['username'];
-$image_id = $row['image_id'];
-
-$pageTitle = $imageTitle;
-
 ?>
-
-<main>
-    <div class="container mt-5">
-        <div class="row">
-            <div>
-                <img src="userimages/<?php echo $fileName ?>" alt="<?php echo $imageTitle ?>" class="img-thumbnail"/>
-                <p><?php echo $statusMsg; ?></p>
-                <p><a href="imageupload.php">Upload new image?</a></p>
-                <p><a href="index.php">Return to home page?</a></p>
-            </div>
-        </div>
-    </div>
-</main>

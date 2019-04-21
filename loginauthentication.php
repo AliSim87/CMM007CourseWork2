@@ -16,9 +16,11 @@
             while($row = $result->fetch_array()){
                 $firstname = $row['firstname'];
                 $userlevel = $row['user_level'];
+                $user_id = $row['user_id'];
                 session_start();
                 $_SESSION['user_level'] = $userlevel;
                 $_SESSION['firstname'] = $firstname;
+                $_SESSION['user_id'] = $user_id;
 
                 if ($_SESSION['user_level'] == 'submission') {
                     header("location: userprofile.php");
