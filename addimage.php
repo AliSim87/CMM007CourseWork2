@@ -27,7 +27,7 @@ if (isset($_POST["submit"]) && !empty($_FILES["file"]["name"])) {
         if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)) {
             $sql = "INSERT into images (user_id, file_name, title, category, supporting_info) VALUES ('$user_id','$fileName','$imageTitle','$category','$comment')";
             if (mysqli_query($db, $sql)) {
-                $statusMsg = "File uploaded successfully"
+                $statusMsg = "File uploaded successfully";
             } else {
                 $statusMsg = "Error: " . $sql . "<br>" . mysqli_error($db);
             }
