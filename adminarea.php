@@ -1,4 +1,5 @@
-<?php $pageTitle = "Admin Area";
+<?php
+$pageTitle = "Admin Area";
 include 'header.php';
 session_start();
 if (!isset($_SESSION['user_level'])) {

@@ -1,11 +1,12 @@
 <?php
+$pageTitle = 'Review Feedback';
+include 'header.php';
+session_start();
 if (!isset($_SESSION['user_level'])) {
     header("Location:login.php");
 } elseif ($_SESSION['user_level'] != 'admin') {
     header("Location:unauthorised.php");
 }
-$pageTitle = 'Review Feedback';
-include 'header.php';
 ?>
 <main>
     <div class="container mt-5">
