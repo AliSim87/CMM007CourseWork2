@@ -1,6 +1,26 @@
+/* Typography */
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+}
+
+/* Header */
+
 .bg-light {
     background-color: #dfdce9 !important;
 }
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.5);
+    font-size: 1.2rem;
+}
+
+/* Homepage */
 
 .jumbotron {
     background-image: url("/assets/images/homepagebanner.jpg");
@@ -15,29 +35,19 @@
     border-radius: 25px;
 }
 
-.fakeimg {
-    height: 200px;
-    background: #aaa;
+.img-homepage {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 25px;
 }
 
-body {
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Amatic SC', cursive;
-    font-weight: bold;
-}
+/* Footer */
 
 footer {
     width: 100%;
-    height: 60px;
 }
 
-.navbar-light .navbar-nav .nav-link {
-    color: rgba(0,0,0,.5);
-    font-size: 1.2rem;
-}
+/* Forms */
 
 .image-upload {
     background: #f7f7f7;
@@ -65,11 +75,7 @@ footer {
     font-weight: bold;
 }
 
-.img-homepage {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 25px;
-}
+/* Gallery */
 
 .img-thumbnail {
     width: 300px;
