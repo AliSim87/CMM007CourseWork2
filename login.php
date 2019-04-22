@@ -5,19 +5,16 @@
         <form action="loginauthentication.php" method="post">
             <h2 class="text-center">Log in</h2>
             <div class="form-group">
-                <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+                <input type="text" class="form-control" name="username" placeholder="Username" required="required" aria-label="username">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                <input type="password" class="form-control" name="password" placeholder="Password" required="required" aria-label="password">
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block">Log in</button>
             </div>
-            <div class="clearfix">
-                <a href="#">Forgot Password?</a>
-            </div>
         </form>
-        <p class="text-center"><a href="#">Create an Account</a></p>
+        <p class="text-center"><a href='signup.php'>Create an Account</a></p>
     </div>
 </main>
 
