@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <textarea form="imageupload" rows="4" cols="50" name="comment">Enter supporting information here...</textarea>
+                <textarea form="imageupload" rows="4" cols="35" name="comment">Enter supporting information here...</textarea>
             </div>
             <div class="form-group">
                 <input type="submit" class="form-control" name="submit" value="Upload">
