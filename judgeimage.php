@@ -31,10 +31,10 @@ include 'header.php';
 <main>
     <div class="container mt-5">
         <div class="row">
-            <div class="col-6">
+            <div class="col-xl-6">
                 <img src="<?php echo $imageURL ?>" alt="<?php echo $imageTitle ?>" style="max-width: 550px;"/>
             </div>
-            <div class="col-6">
+            <div class="col-xl-6">
                 <p>Title: <?php echo $imageTitle ?></p>
                 <p>Name: <?php echo $firstName ." ". $surname ?></p>
                 <p>Supporting Statement: <?php echo $comment ?></p>

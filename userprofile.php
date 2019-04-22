@@ -9,11 +9,9 @@ if (!isset($_SESSION['user_level'])) {
 ?>
     <main>
         <div class="container mt-5">
-            <div class="row">
-                <div class="col">
-                    <h2>Welcome Back <?php print $_SESSION['firstname'] ?></h2>
-                    <p><a href="imageupload.php">Upload a photo</a></p>
-                </div>
+            <div class="image-upload">
+                <h2>Welcome Back <?php print $_SESSION['firstname'] ?></h2>
+                <p><a href="imageupload.php">Upload a photo</a></p>
             </div>
         </div>
     </main>
