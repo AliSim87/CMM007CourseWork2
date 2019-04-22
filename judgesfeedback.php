@@ -16,7 +16,7 @@ if (!isset($_SESSION['user_level'])) {
 
                 $user_id = $_GET['user_id'];
 
-                $sql = $db->query("SELECT * FROM scores INNER JOIN images WHERE user_id='$user_id' AND scores.image_id=images.image_id");
+                $sql = $db->query("SELECT * FROM scores INNER JOIN images WHERE scores.user_id='$user_id' AND scores.image_id=images.image_id");
 
                 if ($sql->num_rows > 0) {
                     while ($row = $sql->fetch_assoc()) {
