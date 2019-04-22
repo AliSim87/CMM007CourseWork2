@@ -32,21 +32,20 @@ include 'header.php';
     <div class="container mt-5">
         <div class="row">
             <div class="col-6">
-                <img src="<?php echo $imageURL ?>" alt="<?php echo $imageTitle ?>"/>
-                <p><?php echo $imageTitle ?></p>
-                <p><?php echo $firstName ." ". $surname ?></p>
-                <p><?php echo $comment ?></p>
-
+                <img src="<?php echo $imageURL ?>" alt="<?php echo $imageTitle ?>" style="max-width: 550px;"/>
             </div>
             <div class="col-6">
+                <p>Title: <?php echo $imageTitle ?></p>
+                <p>Name: <?php echo $firstName ." ". $surname ?></p>
+                <p>Supporting Statement: <?php echo $comment ?></p>
                 <form action="addjudgement.php" method="post">
                     <input type="hidden" name="image_id" value="<?php echo $image_id ?>">
                     <input type="hidden" name="category" value="<?php echo $category ?>">
                     <div class="form-group">
-                        <div><input type="range" size="2" name="effectiveness" min="1" max="5" value="3">Effectiveness (1-5)</div>
-                        <div><input type="range" size="2" name="quality" min="1" max="5" value="3">Quality (1-5)</div>
-                        <div><input type="range" size="2" name="lighting" min="1" max="5" value="3">Lighting (1-5)</div>
-                        <div><input type="range" size="2" name="framing" min="1" max="5" value="3">Framing (1-5)</div>
+                        <div><input type="range" size="2" name="effectiveness" min="1" max="5" value="3">  Effectiveness (1-5)</div>
+                        <div><input type="range" size="2" name="quality" min="1" max="5" value="3"> Quality (1-5)</div>
+                        <div><input type="range" size="2" name="lighting" min="1" max="5" value="3"> Lighting (1-5)</div>
+                        <div><input type="range" size="2" name="framing" min="1" max="5" value="3"> Framing (1-5)</div>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">Submit</button>
