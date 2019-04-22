@@ -14,7 +14,7 @@ if (!isset($_SESSION['user_level'])) {
 
             <?php include 'dbconnect.php';
 
-            $sql = $db->query("SELECT user_id FROM users WHERE user_level='judge'");
+            $sql = $db->query("SELECT * FROM users WHERE user_level='judge'");
 
             if ($sql->num_rows > 0) {
                 while ($row = $sql->fetch_array()) {
