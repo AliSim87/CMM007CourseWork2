@@ -22,7 +22,7 @@ while ($row = $result->fetch_array()) {
 
 if (isset($_POST["submit"]) && !empty($_FILES["file"]["name"])) {
     $allowTypes = array('jpg', 'JPG', 'png', 'PNG', 'jpeg', 'JPEG', 'gif', 'GIF', 'pdf', 'PDF');
-    if ($_FILES["file"]["size"] > 10000000) {
+    // if ($_FILES["file"]["size"] > 10000000) {
         if (in_array($fileType, $allowTypes)) {
             if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)) {
                 $sql = "INSERT into images (user_id, file_name, title, category, supporting_info) VALUES ('$user_id','$fileName','$imageTitle','$category','$comment')";
@@ -37,9 +37,9 @@ if (isset($_POST["submit"]) && !empty($_FILES["file"]["name"])) {
         } else {
             $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
         }
-    } else {
-        $statusMsg = 'File to large.  Please ensure file is under 10mb';
-    }
+    //} else {
+        //$statusMsg = 'File to large.  Please ensure file is under 10mb';
+    //}
 } else {
     $statusMsg = 'Please select a file to upload.';
 }
