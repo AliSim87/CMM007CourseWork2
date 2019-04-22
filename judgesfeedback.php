@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_level'])) {
 ?>
     <main>
         <div class="container mt-5">
-
+            <div class="row">
 
             <?php include 'dbconnect.php';
 
@@ -27,18 +27,19 @@ if (!isset($_SESSION['user_level'])) {
                     $lighting = $row['lighting'];
                     $framing = $row['framing'];
                     ?>
-                    <div class="row">
+
                         <p> Title: <?php echo $imageTitle ?> <br/>
                             Effectiveness: <?php echo $effectiveness ?> <br/>
                             Quality: <?php echo $quality ?> <br/>
                             Lighting: <?php echo $lighting ?> <br/>
                             Framing: <?php echo $framing ?>
                         </p>
-                    </div>
+
                 <?php }
             } else { ?>
                 <p>No image(s) found...</p>
             <?php } ?>
+            </div>
         </div>
     </main>
 
