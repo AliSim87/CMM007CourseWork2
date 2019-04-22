@@ -25,11 +25,10 @@ if (isset($_POST["submit"]) && !empty($_FILES["file"]["name"])) {
     $allowTypes = array('jpg','JPG', 'png','PNG', 'jpeg', 'JPEG', 'gif', 'GIF', 'pdf', 'PDF');
     if (in_array($fileType, $allowTypes)) {
         if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)) {
-            $insert = $db->query("INSERT into images (user_id, file_name, title, category, supporting_info) VALUES ('$user_id','$fileName','$imageTitle','$category','$comment')");
-            if ($insert) {
-                $statusMsg = "The file " . $fileName . " has been uploaded successfully.";
+            $sql = "INSERT into images (user_id, file_name, title, category, supporting_info) VALUES ('$user_id','$fileName','$imageTitle','$category','$comment')";
+            if (mysqli_query($db, $sql)) {
             } else {
-                $statusMsg = "File upload failed, please try again." .$user_id ." ". $category ." ". $comment ." ". $fileName ." ". $imageTitle;
+                echo "Error: " . $sql . "<br>" . mysqli_error($db);
             }
         } else {
             $statusMsg = "Sorry, there was an error uploading your file.";
