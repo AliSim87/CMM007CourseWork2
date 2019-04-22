@@ -42,9 +42,9 @@ include 'header.php'; ?>
                                         </button>
                                     </form>
                                 </div>
-                                </div>
-                            <?php }
-                        }
+                            <?php } ?>
+                            </div>
+                        <?php }
                     }
                 } else { ?>
                     <p>No image(s) found...</p>
