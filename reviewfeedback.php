@@ -14,29 +14,18 @@ if (!isset($_SESSION['user_level'])) {
 
             <?php include 'dbconnect.php';
 
-            $sql = $db->query("SELECT * FROM images INNER JOIN users INNER JOIN scores WHERE images.user_id=users.user_id AND images.users.user_id=scores.user_id AND scores.image_id=images.image_id");
+            $sql = $db->query("SELECT user_id FROM users WHERE user_level='judge'");
 
             if ($sql->num_rows > 0) {
-                while ($row = $sql->fetch_assoc()) {
-
-                    $imageTitle = $row['title'];
+                while ($row = $sql->fetch_array()) {
                     $firstName = $row['firstname'];
                     $surname = $row['lastname'];
-                    $user_id = $row['scores.user_id'];
-                    $effectiveness = $row['effectiveness'];
-                    $quality = $row['quality'];
-                    $lighting = $row['lighting'];
-                    $framing = $row['framing'];
+                    $user_id = $row['user_id'];
                     ?>
-                    <p><?php echo $imageTitle ?></p>
-                    <p>Judged by: <?php echo $firstName . " " . $surname ?></p>
-                    <p><?php echo $effectiveness ?></p>
-                    <p><?php echo $quality ?></p>
-                    <p><?php echo $lighting ?></p>
-                    <p><?php echo $framing ?></p>
+                    <p><a href="judgesfeedback.php?user_id=<?php echo $user_id?>">Photos judged by: <?php echo $firstName . " " . $surname ?></a></p>
                 <?php }
             } else { ?>
-                <p>No image(s) found...</p>
+                <p>No Judges have marked yet</p>
             <?php } ?>
         </div>
     </div>
