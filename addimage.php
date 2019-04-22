@@ -22,7 +22,7 @@ while ($row = $result->fetch_array()) {
 }
 
 if (isset($_POST["submit"]) && !empty($_FILES["file"]["name"])) {
-    $allowTypes = array('jpg', 'png', 'jpeg', 'gif', 'pdf');
+    $allowTypes = array('jpg','JPG', 'png','PNG', 'jpeg', 'JPEG', 'gif', 'GIF', 'pdf', 'PDF');
     if (in_array($fileType, $allowTypes)) {
         if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)) {
             $insert = $db->query("INSERT into images (user_id, file_name, title, category, supporting_info) VALUES ('$user_id','$fileName','$imageTitle','$category','$comment')");
