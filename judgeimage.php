@@ -15,6 +15,10 @@ if ($sql->num_rows > 0) {
     while ($row = $sql->fetch_assoc()) {
         $imageURL = 'userimages/' . $row['file_name'];
         $category = $row['category'];
+        $imageTitle = $row['title'];
+        $firstName = $row['firstname'];
+        $surname = $row['lastname'];
+        $comment = $row['supporting_info'];
     }
 }
 
@@ -27,10 +31,14 @@ include 'header.php';
 <main>
     <div class="container mt-5">
         <div class="row">
-            <div>
+            <div class="col-6">
                 <img src="<?php echo $imageURL ?>" alt="<?php echo $imageTitle ?>"/>
+                <p><?php echo $imageTitle ?></p>
+                <p><?php echo $firstName ." ". $surname ?></p>
+                <p><?php echo $comment ?></p>
+
             </div>
-            <div>
+            <div class="col-6">
                 <form action="addjudgement.php" method="post">
                     <input type="hidden" name="image_id" value="<?php echo $image_id ?>">
                     <input type="hidden" name="category" value="<?php echo $category ?>">
