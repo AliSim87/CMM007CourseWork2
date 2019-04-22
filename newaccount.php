@@ -29,7 +29,4 @@ else {
     header("location:adminarea.php");
 }
 
-
-
-
 ?>

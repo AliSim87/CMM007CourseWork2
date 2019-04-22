@@ -8,7 +8,6 @@ $targetDir = "userimages/";
 $fileName = basename($_FILES["file"]["name"]);
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
-$fileSize = floor(filesize($targetFilePath) / 1024 / 1024, 1);
 
 $imageTitle = $_POST['imagetitle'];
 $category = $_POST['category'];
@@ -22,20 +21,25 @@ while ($row = $result->fetch_array()) {
 }
 
 if (isset($_POST["submit"]) && !empty($_FILES["file"]["name"])) {
-    $allowTypes = array('jpg','JPG', 'png','PNG', 'jpeg', 'JPEG', 'gif', 'GIF', 'pdf', 'PDF');
-    if (in_array($fileType, $allowTypes)) {
-        if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)) {
-            $sql = "INSERT into images (user_id, file_name, title, category, supporting_info) VALUES ('$user_id','$fileName','$imageTitle','$category','$comment')";
-            if (mysqli_query($db, $sql)) {
-                $statusMsg = "File uploaded successfully";
+    $allowTypes = array('jpg', 'JPG', 'png', 'PNG', 'jpeg', 'JPEG', 'gif', 'GIF', 'pdf', 'PDF');
+    $checkFileSize = getimagesize($_FILES["file"]["tmp_name"]);
+    if ($_FILES["fileToUpload"]["size"] > 10000000) {
+        if (in_array($fileType, $allowTypes)) {
+            if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)) {
+                $sql = "INSERT into images (user_id, file_name, title, category, supporting_info) VALUES ('$user_id','$fileName','$imageTitle','$category','$comment')";
+                if (mysqli_query($db, $sql)) {
+                    $statusMsg = "File uploaded successfully";
+                } else {
+                    $statusMsg = "Error: " . $sql . "<br>" . mysqli_error($db);
+                }
             } else {
-                $statusMsg = "Error: " . $sql . "<br>" . mysqli_error($db);
+                $statusMsg = "Sorry, there was an error uploading your file.";
             }
         } else {
-            $statusMsg = "Sorry, there was an error uploading your file.";
+            $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
         }
     } else {
-        $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
+        $statusMsg = 'File to large.  Please ensure file is under 10mb';
     }
 } else {
     $statusMsg = 'Please select a file to upload.';
@@ -51,8 +55,12 @@ include 'header.php';
             <div>
                 <img src="userimages/<?php echo $fileName ?>" alt="<?php echo $imageTitle ?>" class="img-thumbnail"/>
                 <p><?php echo $statusMsg; ?></p>
-                <button onclick="window.location.href = 'imageupload.php';" class="btn btn-primary btn-block">Upload new image?</button>
-                <button onclick="window.location.href = 'index.php';" class="btn btn-primary btn-block">Return to home page?</button>
+                <button onclick="window.location.href = 'imageupload.php';" class="btn btn-primary btn-block">Upload new
+                    image?
+                </button>
+                <button onclick="window.location.href = 'index.php';" class="btn btn-primary btn-block">Return to home
+                    page?
+                </button>
             </div>
         </div>
     </div>
