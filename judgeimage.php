@@ -35,10 +35,10 @@ include 'header.php';
                     <input type="hidden" name="image_id" value="<?php echo $image_id ?>">
                     <input type="hidden" name="category" value="<?php echo $category ?>">
                     <div class="form-group">
-                        <div>Effectiveness: <input type="range" size="2" name="effectiveness" min="1" max="5" value="3"></div>
-                        <div>Quality: <input type="range" size="2" name="quality" min="1" max="5" value="3"></div>
-                        <div>Lighting: <input type="range" size="2" name="lighting" min="1" max="5" value="3"></div>
-                        <div>Framing: <input type="range" size="2" name="framing" min="1" max="5" value="3"></div>
+                        <div><input type="range" size="2" name="effectiveness" min="1" max="5" value="3">Effectiveness (1-5)</div>
+                        <div><input type="range" size="2" name="quality" min="1" max="5" value="3">Quality (1-5)</div>
+                        <div><input type="range" size="2" name="lighting" min="1" max="5" value="3">Lighting (1-5)</div>
+                        <div><input type="range" size="2" name="framing" min="1" max="5" value="3">Framing (1-5)</div>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">Submit</button>
