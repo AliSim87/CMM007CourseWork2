@@ -1,4 +1,7 @@
-<?php $pageTitle = "Upload Image"; include 'header.php' ?>
+<?php
+$pageTitle = "Upload Image";
+include 'header.php'
+?>
 
 <main>
     <div class="login-form">
@@ -43,4 +46,7 @@
         </form>
     </div>
 </main>
-<?php include 'footer.php' ?>
+
+<?php
+include 'footer.php'
+?>

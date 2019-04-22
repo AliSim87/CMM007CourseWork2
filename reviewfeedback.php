@@ -1,6 +1,7 @@
 <?php
 $pageTitle = 'Review Feedback';
 include 'header.php';
+//Check user is admin
 session_start();
 if (!isset($_SESSION['user_level'])) {
     header("Location:login.php");
@@ -10,8 +11,9 @@ if (!isset($_SESSION['user_level'])) {
 ?>
     <main>
         <div class="container mt-5">
-            <?php include 'dbconnect.php';
-
+            <?php
+            include 'dbconnect.php';
+            //Find all judges
             $sql = $db->query("SELECT * FROM users WHERE user_level='judge'");
 
             if ($sql->num_rows > 0) {

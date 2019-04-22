@@ -2,6 +2,8 @@
 session_start();
 include 'dbconnect.php';
 
+//Import upload information from judgesfeedback.php form
+
 $image_id = $_POST['image_id'];
 $user_id = $_SESSION["user_id"];
 $effectiveness = $_POST['effectiveness'];
@@ -9,6 +11,8 @@ $quality = $_POST['quality'];
 $lighting = $_POST['lighting'];
 $framing = $_POST['framing'];
 $category = $_POST['category'];
+
+//Test to see if judge has reviewed image before
 
 $sql = "SELECT * FROM scores WHERE image_id = '$image_id' AND user_id = '$user_id'";
 $result=mysqli_query($db,$sql);
@@ -21,6 +25,8 @@ if(mysqli_num_rows($result) == 0) {
     }
 
     echo $image_id;
+
+    // Send back to category they were viewing.
     $redirectURL = 'displaycategory.php?category='.$category;
     header("location:" .$redirectURL);
 } else {

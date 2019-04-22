@@ -1,4 +1,7 @@
-<?php include 'header.php' ?>
+<?php
+$pageTitle = 'Unauthorised';
+include 'header.php'
+?>
 
 <main>
     <div class="container text-center">
@@ -7,4 +10,6 @@
     </div>
 </main>
 
-<?php include 'footer.php' ?>
+<?php
+include 'footer.php'
+?>

@@ -31,18 +31,20 @@ include 'header.php'; ?>
 
                             ?>
                             <div class="gallery-image">
-                            <img src="<?php echo $imageURL; ?>" alt="<?php echo $imageTitle; ?>"
-                                 class="img-thumbnail"/>
-                            <p><?php echo $imageTitle ?></p>
-                            <p>Uploaded by: <?php echo $firstName . " " . $surname ?></p>
-                            <?php if ($_SESSION['user_level'] == 'judge') { ?>
-                                <div>
-                                    <form method="post" action="judgeimage.php?image_id=<?php echo $image_id ?>">
-                                        <button type="submit" class="btn btn-primary btn-block">Judge this photo?
-                                        </button>
-                                    </form>
-                                </div>
-                            <?php } ?>
+                                <img src="<?php echo $imageURL; ?>" alt="<?php echo $imageTitle; ?>"
+                                     class="img-thumbnail"/>
+                                <p><?php echo $imageTitle ?></p>
+                                <p>Uploaded by: <?php echo $firstName . " " . $surname ?></p>
+                                <?php
+                                //If user is judge show the judge button
+                                if ($_SESSION['user_level'] == 'judge') { ?>
+                                    <div>
+                                        <form method="post" action="judgeimage.php?image_id=<?php echo $image_id ?>"> <!-- Send image_id to judgeimage.php -->
+                                            <button type="submit" class="btn btn-primary btn-block">Judge this photo?
+                                            </button>
+                                        </form>
+                                    </div>
+                                <?php } ?>
                             </div>
                         <?php }
                     }

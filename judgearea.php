@@ -1,5 +1,7 @@
-<?php $pageTitle = "Judge Area";
+<?php
+$pageTitle = "Judge Area";
 include 'header.php';
+//Check user is judge
 session_start();
 if (!isset($_SESSION['user_level'])) {
     header("Location:login.php");

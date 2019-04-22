@@ -1,12 +1,13 @@
 <?php
 include 'dbconnect.php';
+//Check user is judge
 session_start();
 if (!isset($_SESSION['user_level'])) {
     header("Location:login.php");
 } elseif ($_SESSION['user_level'] != 'judge') {
     header("Location:unauthorised.php");
 }
-
+// Get image_id from displaycategory.php
 $image_id = $_GET['image_id'];
 
 $sql = $db->query("SELECT * FROM images INNER JOIN users WHERE image_id = '$image_id' AND images.user_id=users.user_id");

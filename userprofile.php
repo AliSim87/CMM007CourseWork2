@@ -1,5 +1,7 @@
-<?php $pageTitle = "Welcome";
+<?php
+$pageTitle = "Welcome";
 include 'header.php';
+//Check logged in and is user
 session_start();
 if (!isset($_SESSION['user_level'])) {
     header("Location:login.php");
@@ -16,4 +18,6 @@ if (!isset($_SESSION['user_level'])) {
         </div>
     </main>
 
-<?php include 'footer.php' ?>
+<?php
+include 'footer.php'
+?>

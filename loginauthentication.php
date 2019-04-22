@@ -1,9 +1,11 @@
 <?php include("dbconnect.php");
+// Check if username and password were provided
 if (empty($_POST["username"]) || empty($_POST["password"])) {
     echo "Both fields are required.";
 } else {
     $username = $_POST['username'];
     $password = $_POST['password'];
+    //Find username and password
     $sql = "SELECT user_id FROM users WHERE username='$username' and password='$password'";
     $result = mysqli_query($db, $sql);
     if (mysqli_num_rows($result) == 1) {
@@ -30,8 +32,10 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
             }
         }
     } else {
+        //Username and password were incorrect
         $pageTitle = "Incorrect";
-        include 'header.php'; ?>
+        include 'header.php';
+        ?>
         <main>
             <div class="container mt-5">
                 <div class="row">
@@ -41,5 +45,6 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
         </main>
     <?php }
 }
-include 'footer.php'; ?>
+include 'footer.php';
+?>
 

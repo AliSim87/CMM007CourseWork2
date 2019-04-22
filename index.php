@@ -1,5 +1,7 @@
-<?php $pageTitle = 'Home Page';
-include 'header.php' ?>
+<?php
+$pageTitle = 'Home Page';
+include 'header.php'
+?>
 
 <main>
     <div class="jumbotron jumbotron-fluid">
@@ -35,4 +37,6 @@ include 'header.php' ?>
     </div>
 </main>
 
-<?php include 'footer.php' ?>
+<?php
+include 'footer.php'
+?>

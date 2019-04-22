@@ -1,6 +1,7 @@
 <?php
 $pageTitle = 'Review Feedback';
 include 'header.php';
+//Check to see if admin
 session_start();
 if (!isset($_SESSION['user_level'])) {
     header("Location:login.php");
@@ -14,7 +15,7 @@ if (!isset($_SESSION['user_level'])) {
 
             <?php include 'dbconnect.php';
 
-            $user_id = $_GET['user_id'];
+            $user_id = $_GET['user_id']; //Get user_id from reviewfeedback.php
 
             $sql = $db->query("SELECT * FROM scores INNER JOIN images WHERE scores.user_id='$user_id' AND scores.image_id=images.image_id");
 
@@ -43,4 +44,6 @@ if (!isset($_SESSION['user_level'])) {
         </div>
     </main>
 
-<?php include 'footer.php' ?>
+<?php
+include 'footer.php'
+?>

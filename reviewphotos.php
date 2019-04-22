@@ -1,5 +1,7 @@
-<?php $pageTitle = "Review Photos";
+<?php
+$pageTitle = "Review Photos";
 include 'header.php';
+//Check user is admin
 session_start();
 if (!isset($_SESSION['user_level'])) {
     header("Location:login.php");
@@ -15,7 +17,7 @@ if (!isset($_SESSION['user_level'])) {
                 <div>
                     <?php
                     include 'dbconnect.php';
-
+                    //Find unapproved images
                     $query = $db->query("SELECT * FROM images INNER JOIN users WHERE approved=0 AND images.user_id=users.user_id");
 
                     if ($query->num_rows > 0) {

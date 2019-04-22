@@ -1,5 +1,6 @@
 <?php include("dbconnect.php");
 
+//Import information from signup.php form
 $emailaddress = $_POST["emailaddress"];
 $username = $_POST["username"];
 $password = $_POST["password"];
@@ -19,6 +20,7 @@ if (empty($_POST["user_level"])) {
 
     header("location:login.php");
 }
+// If user_level has a value add to database
 else {
     $sql = "INSERT INTO users (username,emailaddress,password,firstname,lastname,postaddress,postcity,postcode,user_level) VALUES ('$username','$emailaddress','$password','$firstname','$lastname','$postaddress','$postcity','$postcode','$user_level')";
     if (mysqli_query($db, $sql)) {

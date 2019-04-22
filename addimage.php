@@ -4,16 +4,23 @@ include("dbconnect.php");
 
 $statusMsg = '';
 
+// Set up image directory
+
 $targetDir = "userimages/";
 $fileName = basename($_FILES["file"]["name"]);
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+
+//Import upload information from imageupload.php form
 
 $imageTitle = $_POST['imagetitle'];
 $category = $_POST['category'];
 $comment = $_POST['comment'];
 $user_id = "";
 $username = $_COOKIE['loggedin'];
+
+// Find user_id from database
+
 $sql = "SELECT * FROM users WHERE username='$username'";
 $result = $db->query($sql);
 while ($row = $result->fetch_array()) {
@@ -22,9 +29,13 @@ while ($row = $result->fetch_array()) {
 
 if (isset($_POST["submit"]) && !empty($_FILES["file"]["name"])) {
     $allowTypes = array('jpg', 'JPG', 'png', 'PNG', 'jpeg', 'JPEG', 'gif', 'GIF', 'pdf', 'PDF');
+    // Attempt at size verification
     // if ($_FILES["file"]["size"] > 10000000) {
+        // Check file type
         if (in_array($fileType, $allowTypes)) {
+            // File moved to directory
             if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)) {
+                //Insert details into database
                 $sql = "INSERT into images (user_id, file_name, title, category, supporting_info) VALUES ('$user_id','$fileName','$imageTitle','$category','$comment')";
                 if (mysqli_query($db, $sql)) {
                     $statusMsg = "File uploaded successfully";
@@ -44,6 +55,7 @@ if (isset($_POST["submit"]) && !empty($_FILES["file"]["name"])) {
     $statusMsg = 'Please select a file to upload.';
 }
 
+$pageTitle = 'Upload image';
 include 'header.php';
 
 ?>
@@ -65,5 +77,7 @@ include 'header.php';
     </div>
 </main>
 
-<? include 'footer.php'; ?>
+<?php
+include 'footer.php';
+?>
 
