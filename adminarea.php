@@ -9,15 +9,11 @@ if (!isset($_SESSION['user_level'])) {
 ?>
     <main>
         <div class="container mt-5">
-            <div class="row">
-                <div class="col">
-                    <h2>Welcome Back <?php print $_SESSION['firstname'] ?></h2>
-                    <p>What would you like to do?</p>
-                    <ul>
-                        <li><a href="signup.php">Add new user</a></li>
-                        <li><a href="reviewphotos.php">Review photos</a></li>
-                    </ul>
-                </div>
+            <div class="image-upload">
+                <h2>Welcome Back <?php print $_SESSION['firstname'] ?></h2>
+                <p>What would you like to do?</p>
+                <button onclick="window.location.href = 'signup.php';">Add new user</button>
+                <button onclick="window.location.href = 'reviewphotos.php';">Review photos</button>
             </div>
         </div>
     </main>
