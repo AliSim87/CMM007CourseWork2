@@ -12,8 +12,8 @@ if (!isset($_SESSION['user_level'])) {
             <div class="image-upload">
                 <h2>Welcome Back <?php print $_SESSION['firstname'] ?></h2>
                 <p>What would you like to do?</p>
-                <button onclick="window.location.href = 'signup.php';">Add new user</button>
-                <button onclick="window.location.href = 'reviewphotos.php';">Review photos</button>
+                <button onclick="window.location.href = 'signup.php';" class="btn btn-primary btn-block">Add new user</button>
+                <button onclick="window.location.href = 'reviewphotos.php';" class="btn btn-primary btn-block">Review photos</button>
             </div>
         </div>
     </main>

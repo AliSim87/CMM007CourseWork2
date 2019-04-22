@@ -51,8 +51,8 @@ include 'header.php';
             <div>
                 <img src="userimages/<?php echo $fileName ?>" alt="<?php echo $imageTitle ?>" class="img-thumbnail"/>
                 <p><?php echo $statusMsg; ?></p>
-                <button onclick="window.location.href = 'imageupload.php';">Upload new image?</button>
-                <button onclick="window.location.href = 'index.php';">Return to home page?</button>
+                <button onclick="window.location.href = 'imageupload.php';" class="btn btn-primary btn-block">Upload new image?</button>
+                <button onclick="window.location.href = 'index.php';" class="btn btn-primary btn-block">Return to home page?</button>
             </div>
         </div>
     </div>
