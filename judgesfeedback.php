@@ -14,22 +14,20 @@ if (!isset($_SESSION['user_level'])) {
 
                 <?php include 'dbconnect.php';
 
-                $sql = $db->query("SELECT user_id FROM users WHERE user_level='judge'");
+                $user_id = $_GET['user_id'];
+
+                $sql = $db->query("SELECT * FROM scores INNER JOIN images WHERE user_id=$user_id AND scores.image_id=images.image_id");
 
                 if ($sql->num_rows > 0) {
                     while ($row = $sql->fetch_assoc()) {
 
                         $imageTitle = $row['title'];
-                        $firstName = $row['firstname'];
-                        $surname = $row['lastname'];
-                        $user_id = $row['scores.user_id'];
                         $effectiveness = $row['effectiveness'];
                         $quality = $row['quality'];
                         $lighting = $row['lighting'];
                         $framing = $row['framing'];
                         ?>
                         <p><?php echo $imageTitle ?></p>
-                        <p>Judged by: <?php echo $firstName . " " . $surname ?></p>
                         <p><?php echo $effectiveness ?></p>
                         <p><?php echo $quality ?></p>
                         <p><?php echo $lighting ?></p>
