@@ -29,7 +29,7 @@ if (isset($_POST["submit"]) && !empty($_FILES["file"]["name"])) {
             if ($insert) {
                 $statusMsg = "The file " . $fileName . " has been uploaded successfully.";
             } else {
-                $statusMsg = "File upload failed, please try again.";
+                $statusMsg = "File upload failed, please try again." .$user_id ." ". $category ." ". $comment ." ". $fileName ." ". $imageTitle;
             }
         } else {
             $statusMsg = "Sorry, there was an error uploading your file.";
