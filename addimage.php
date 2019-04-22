@@ -27,8 +27,9 @@ if (isset($_POST["submit"]) && !empty($_FILES["file"]["name"])) {
         if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)) {
             $sql = "INSERT into images (user_id, file_name, title, category, supporting_info) VALUES ('$user_id','$fileName','$imageTitle','$category','$comment')";
             if (mysqli_query($db, $sql)) {
+                $statusMsg = "File uploaded successfully"
             } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($db);
+                $statusMsg = "Error: " . $sql . "<br>" . mysqli_error($db);
             }
         } else {
             $statusMsg = "Sorry, there was an error uploading your file.";
@@ -46,12 +47,12 @@ include 'header.php';
 
 <main>
     <div class="container mt-5">
-        <div class="row">
+        <div class="image-upload">
             <div>
                 <img src="userimages/<?php echo $fileName ?>" alt="<?php echo $imageTitle ?>" class="img-thumbnail"/>
                 <p><?php echo $statusMsg; ?></p>
-                <p><a href="imageupload.php">Upload new image?</a></p>
-                <p><a href="index.php">Return to home page?</a></p>
+                <button onclick="window.location.href = 'imageupload.php';">Upload new image?</button>
+                <button onclick="window.location.href = 'index.php';">Return to home page?</button>
             </div>
         </div>
     </div>

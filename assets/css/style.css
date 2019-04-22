@@ -39,6 +39,14 @@ footer {
     font-size: 1.2rem;
 }
 
+.image-upload {
+    background: #f7f7f7;
+    padding: 30px;
+    width: 350px;
+    margin: 50px auto;
+    text-align: center;
+}
+
 .login-form {
     width: 400px;
     margin: 50px auto;
