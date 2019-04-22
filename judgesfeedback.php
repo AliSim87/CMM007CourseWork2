@@ -28,11 +28,12 @@ if (!isset($_SESSION['user_level'])) {
                     $framing = $row['framing'];
                     ?>
                     <div class="row">
-                        <p> Title: <?php echo $imageTitle ?> </p>
-                        <p> Effectiveness: <?php echo $effectiveness ?> </p>
-                        <p> Quality: <?php echo $quality ?> </p>
-                        <p> Lighting: <?php echo $lighting ?> </p>
-                        <p> Framing: <?php echo $framing ?> </p>
+                        <p> Title: <?php echo $imageTitle ?> <br/>
+                            Effectiveness: <?php echo $effectiveness ?> <br/>
+                            Quality: <?php echo $quality ?> <br/>
+                            Lighting: <?php echo $lighting ?> <br/>
+                            Framing: <?php echo $framing ?>
+                        </p>
                     </div>
                 <?php }
             } else { ?>

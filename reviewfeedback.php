@@ -8,10 +8,8 @@ if (!isset($_SESSION['user_level'])) {
     header("Location:unauthorised.php");
 }
 ?>
-<main>
-    <div class="container mt-5">
-        <div class="row">
-
+    <main>
+        <div class="container mt-5">
             <?php include 'dbconnect.php';
 
             $sql = $db->query("SELECT * FROM users WHERE user_level='judge'");
@@ -22,13 +20,16 @@ if (!isset($_SESSION['user_level'])) {
                     $surname = $row['lastname'];
                     $user_id = $row['user_id'];
                     ?>
-                    <p><a href="judgesfeedback.php?user_id=<?php echo $user_id?>">Photos judged by: <?php echo $firstName . " " . $surname ?></a></p>
+                    <div class="row">
+                        <p><a href="judgesfeedback.php?user_id=<?php echo $user_id ?>">Photos judged
+                                by: <?php echo $firstName . " " . $surname ?></a></p>
+                    </div>
                 <?php }
             } else { ?>
                 <p>No Judges have marked yet</p>
             <?php } ?>
+
         </div>
-    </div>
-</main>
+    </main>
 
 <?php include 'footer.php' ?>
