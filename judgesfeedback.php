@@ -10,33 +10,34 @@ if (!isset($_SESSION['user_level'])) {
 ?>
     <main>
         <div class="container mt-5">
-            <div class="row">
 
-                <?php include 'dbconnect.php';
 
-                $user_id = $_GET['user_id'];
+            <?php include 'dbconnect.php';
 
-                $sql = $db->query("SELECT * FROM scores INNER JOIN images WHERE scores.user_id='$user_id' AND scores.image_id=images.image_id");
+            $user_id = $_GET['user_id'];
 
-                if ($sql->num_rows > 0) {
-                    while ($row = $sql->fetch_assoc()) {
+            $sql = $db->query("SELECT * FROM scores INNER JOIN images WHERE scores.user_id='$user_id' AND scores.image_id=images.image_id");
 
-                        $imageTitle = $row['title'];
-                        $effectiveness = $row['effectiveness'];
-                        $quality = $row['quality'];
-                        $lighting = $row['lighting'];
-                        $framing = $row['framing'];
-                        ?>
-                        <p><?php echo $imageTitle ?></p>
-                        <p><?php echo $effectiveness ?></p>
-                        <p><?php echo $quality ?></p>
-                        <p><?php echo $lighting ?></p>
-                        <p><?php echo $framing ?></p>
-                    <?php }
-                } else { ?>
-                    <p>No image(s) found...</p>
-                <?php } ?>
-            </div>
+            if ($sql->num_rows > 0) {
+                while ($row = $sql->fetch_assoc()) {
+
+                    $imageTitle = $row['title'];
+                    $effectiveness = $row['effectiveness'];
+                    $quality = $row['quality'];
+                    $lighting = $row['lighting'];
+                    $framing = $row['framing'];
+                    ?>
+                    <div class="row">
+                        <p>Title: <?php echo $imageTitle ?></p>
+                        <p>Effectiveness: <?php echo $effectiveness ?></p>
+                        <p>Quality: <?php echo $quality ?></p>
+                        <p>Lighting: <?php echo $lighting ?></p>
+                        <p>Framing: <?php echo $framing ?></p>
+                    </div>
+                <?php }
+            } else { ?>
+                <p>No image(s) found...</p>
+            <?php } ?>
         </div>
     </main>
 
